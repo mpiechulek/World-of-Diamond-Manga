@@ -1,6 +1,5 @@
 html {
-    font-size: 62.5%;
-    box-sizing: border-box;box-sizing: border-box;
+    font-size: 62.5%;   
 }
 
 *, 
@@ -8,12 +7,13 @@ html {
 *::before {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: Garamond;
     font-size: 1.6rem;
-    color: $color-white;   
+    color: $color-white;  
     background-color: $color-masala;
     overflow-x: hidden;
     box-sizing: border-box;

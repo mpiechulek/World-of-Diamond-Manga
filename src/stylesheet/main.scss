@@ -8,7 +8,9 @@
         'base/helper',
         'base/typography';
 
-@import 'components/buttons';
+@import 'components/main-header',
+        'components/icons',
+        'components/buttons';
 
 @import 'layout/footer',
         'layout/list',
