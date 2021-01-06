@@ -5,28 +5,17 @@ import { HomeLayoutComponent } from './layout/home/home-layout.component';
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+  {
+    path: 'home',
     component: HomeLayoutComponent,
     loadChildren: () =>
       import('./modules/home/home.module').then(
         m => m.HomeModule
       )
-  },
-  // {
-  //   path: '',
-  //   component: HomeLayoutComponent,
-  //   loadChildren: () =>
-  //     import('./modules/company/company.module').then(
-  //       m => m.CompanyModule
-  //     )
-  // },
-  // {
-  //   path: '',
-  //   component: HomeLayoutComponent,
-  //   loadChildren: () =>
-  //     import('./modules/company/company.module').then(
-  //       m => m.CompanyModule
-  //     )
-  // }
+  }
 ];
 
 @NgModule({
