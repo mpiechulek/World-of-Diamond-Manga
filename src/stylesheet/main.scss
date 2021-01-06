@@ -1,12 +1,12 @@
 @charset 'UTF-8';
 
-@import 'abstracts/base',
+@import 'abstracts/mixins',
         'abstracts/variables';
 
-@import 'baseracts/base',
-        'baseracts/fonts',
-        'baseracts/helper',
-        'baseracts/typography';
+@import 'base/base',
+        'base/fonts',
+        'base/helper',
+        'base/typography';
 
 @import 'components/buttons';
 
