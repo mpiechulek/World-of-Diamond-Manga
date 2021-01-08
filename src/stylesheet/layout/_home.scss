@@ -1,5 +1,5 @@
 .home-section {
-  height: 19rem;
+  height: 35%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -9,7 +9,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
-
 
     .home-text-wrapper {
       margin-top: 2rem;
@@ -30,6 +29,5 @@
       margin-top: 1rem;
       width: 70%;
     }
-
   }
 }

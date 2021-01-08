@@ -7,7 +7,7 @@
     width: 90rem;
     height: 100%;
     margin-right: auto;
-    margin-left: auto;
+    margin-left: auto;   
 
     border: solid 2px $color-border-dive-gray;
     border-radius: 15px;
@@ -19,16 +19,19 @@
     align-items: center;
 
     .main-wrapper {
-      position: relative;
+      position: relative; 
+      overflow:hidden;
+      overflow-y:scroll;     
+
       background-color: $color-cannon-pink;
       border: none;
-      border-radius: 5px;
-      padding: 1.5rem;
-      padding-bottom: 4.5rem;
-      width: 100%;
-      flex-direction: column;
+      border-top-left-radius: 0.5rem ;
+      border-top-right-radius: 0.5rem ;
+      padding: 1.5rem;     
+      width: 100%;          
       display: flex;
-      flex-grow: 2;
+      flex-direction: column; 
+      flex-grow: 1; 
     }
   }
 }

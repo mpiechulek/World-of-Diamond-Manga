@@ -1,6 +1,6 @@
 .home-gallery {
   max-height: 100%;
-  height: 100%;
+  height: 75%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1f;
@@ -21,41 +21,32 @@
   }
 
   .home-gallery-1 {
-    position: relative;
-    background-color: rgb(255, 170, 140);
+    position: relative;   
     grid-area: home-gallery-1;  
   }
 
   .home-gallery-2 {
-    position: relative;
-    background-color: rgb(140, 238, 255);
+    position: relative;    
     grid-area: home-gallery-2;
   }
 
   .home-gallery-3 {
-    position: relative;
-    background-color: rgb(251, 140, 255);
-    grid-area: home-gallery-3;
-    overflow: hidden;
+    position: relative;   
+    grid-area: home-gallery-3;  
   }
 
   .home-gallery-4 {
-    position: relative;
-    background-color: rgb(243, 255, 140);
-    grid-area: home-gallery-4;
-    overflow: hidden;
+    position: relative;   
+    grid-area: home-gallery-4;  
   }
 
   .home-gallery-5 {
-    position: relative;
-    background-color: rgb(255, 140, 159);
+    position: relative;  
     grid-area: home-gallery-5;
-    overflow: hidden;
   }
 
   .home-gallery-6 {
-    position: relative;
-    background-color: rgb(255, 170, 140);
+    position: relative;   
     grid-area: home-gallery-6;
   }
 }

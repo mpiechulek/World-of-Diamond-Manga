@@ -1,0 +1,39 @@
+.comic-section {
+  position: relative;
+  width: 100%;  
+
+  .comic-chapter-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    .list-chapter {
+      background-color: $color-masala;
+      list-style: none;
+      height: 5rem;
+      width: 60%;
+      margin-top: 0.5rem;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: $color-border-dive-gray;
+        color: $color-gold-sand;
+      }
+
+      &:active {       
+        color: $color-masala;
+      }
+    }
+  }
+}
+
+.section::-webkit-scrollbar {
+  display: none;
+}

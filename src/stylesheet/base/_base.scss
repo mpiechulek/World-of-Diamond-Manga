@@ -11,12 +11,11 @@ html {
 }
 
 body {
+  position: relative;
   font-family: Garamond;
   font-size: 1.6rem;
   color: $color-white;
   background-color: $color-masala;
-  overflow-y: hidden;
-  overflow-x: hidden;
   box-sizing: border-box;
 
   -webkit-font-smoothing: antialiased;
@@ -24,4 +23,8 @@ body {
 
   text-rendering: optimizeLegibility;
   -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {  
+  display: none;
 }
