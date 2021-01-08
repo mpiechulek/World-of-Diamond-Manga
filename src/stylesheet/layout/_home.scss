@@ -1,6 +1,35 @@
 .home-section {
-    height: 19rem;
+  height: 19rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .home-section-text-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+
+    .home-text-wrapper {
+      margin-top: 2rem;
+      margin-right: 3rem;
+      width: 80%;
+    }
+
+    .line-shape-gold {
+      background-color: $color-gold-sand;
+      height: 0.4rem;
+      margin-top: 2rem;
+      width: 95%;
+    }
+
+    .line-shape-dark {
+      background-color: $color-mine-shaft;   
+      height: 0.4rem;
+      margin-top: 1rem;
+      width: 70%;
+    }
+
+  }
 }
