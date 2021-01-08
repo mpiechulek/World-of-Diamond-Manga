@@ -1,0 +1,34 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+  padding: 1.2rem 0;
+
+  .main-container {
+    width: 90rem;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+
+    border: solid 2px $color-border-dive-gray;
+    border-radius: 15px;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .main-wrapper {
+      position: relative;
+      background-color: $color-cannon-pink;
+      border: none;
+      border-radius: 5px;
+      padding: 1.5rem;
+      padding-bottom: 4.5rem;
+      width: 100%;
+      flex-direction: column;
+      display: flex;
+      flex-grow: 2;
+    }
+  }
+}

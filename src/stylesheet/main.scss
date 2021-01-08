@@ -8,11 +8,17 @@
         'base/helper',
         'base/typography';
 
-@import 'components/buttons';
+@import 'components/main-header',
+        'components/icons',
+        'components/home-gallery',
+        'components/buttons';
 
 @import 'layout/footer',
-        'layout/list',
+        'layout/header',
         'layout/main',
+        'layout/about',
+        'layout/comic',
+        'layout/home',
         'layout/navbar';
 
 @import 'pages/about',

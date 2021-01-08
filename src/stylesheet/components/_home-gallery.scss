@@ -1,0 +1,76 @@
+.home-gallery {
+  max-height: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1f;
+  grid-gap: 0.8rem;
+
+  grid-template-areas:
+    "home-gallery-1 home-gallery-2 home-gallery-2 home-gallery-2"
+    "home-gallery-3 home-gallery-3 home-gallery-4 home-gallery-5"
+    "home-gallery-3 home-gallery-3 home-gallery-4 home-gallery-6";
+
+
+  .home-image {  
+    position: absolute;  
+    object-fit: cover;   
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    overflow: hidden;
+  }
+
+  .home-gallery-1 {
+    position: relative;
+    background-color: rgb(255, 170, 140);
+    grid-area: home-gallery-1;  
+  }
+
+  .home-gallery-2 {
+    position: relative;
+    background-color: rgb(140, 238, 255);
+    grid-area: home-gallery-2;
+  }
+
+  .home-gallery-3 {
+    position: relative;
+    background-color: rgb(251, 140, 255);
+    grid-area: home-gallery-3;
+    overflow: hidden;
+  }
+
+  .home-gallery-4 {
+    position: relative;
+    background-color: rgb(243, 255, 140);
+    grid-area: home-gallery-4;
+    overflow: hidden;
+  }
+
+  .home-gallery-5 {
+    position: relative;
+    background-color: rgb(255, 140, 159);
+    grid-area: home-gallery-5;
+    overflow: hidden;
+  }
+
+  .home-gallery-6 {
+    position: relative;
+    background-color: rgb(255, 170, 140);
+    grid-area: home-gallery-6;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .home-gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "home-gallery-1"
+      "home-gallery-2"
+      "home-gallery-3"
+      "home-gallery-4"
+      "home-gallery-5"
+      "home-gallery-6";
+  }
+}

@@ -1,0 +1,35 @@
+.navbar {
+  margin-top: 1.2rem;  
+  margin-bottom: 2.5rem;  
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__list-item {
+    list-style: none;
+    text-align: center;
+}
+
+&__tag {
+    flex: 1;
+    text-decoration: none;
+    color: $color-white;
+    padding: 1rem 8rem;
+
+    &:hover {
+      color: $color-gold-sand;
+    }
+
+    &:active {
+      color: $color-white;
+    }
+  }
+}
+
+.router-link-color {
+  color: $color-gold-sand;
+  border-bottom: solid 4px $color-gold-sand;
+}
