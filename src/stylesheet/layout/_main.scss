@@ -1,21 +1,33 @@
 .main {
-    width: 100vw;
-    height: 100vh;
-    padding: 2rem 0; 
-    
-    .main-container {
-        width: 90rem;
-        height: 100%;
-        margin-right: auto;
-        margin-left: auto;
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem 0;
 
-        border: solid 3px $color-border-dive-gray;
-        border-radius: 15px;        
-        padding: 1.5rem;  
-        
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
+  .main-container {
+    width: 90rem;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+
+    border: solid 3px $color-border-dive-gray;
+    border-radius: 15px;
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .main-wrapper {
+      background-color: $color-cannon-pink;
+      border: none;
+      border-radius: 5px;
+
+      padding: 2rem;
+      width: 100%;
+      flex-direction: column;
+      display: flex;
+      flex-grow: 2;
     }
+  }
 }
