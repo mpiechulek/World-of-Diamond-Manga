@@ -1,29 +1,28 @@
 .comic-section {
-    margin: 1rem;
-    padding: fixed;
+  position: relative;
+  width: 100%;
+
+  .comic-chapter-list {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;   
+    align-items: center;
 
-    .comic-chapter-list {
-        width: 100%;        
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-              
-        .list-chapter {
-            background-color: $color-masala;
-            list-style: none;
-            height: 5rem;
-            width: 60%;
-            margin-top: 0.5rem;
+    .list-chapter {
+      background-color: $color-masala;
+      list-style: none;
+      height: 5rem;
+      width: 60%;
+      margin-top: 0.5rem;
 
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
     }
+  }
+}
 
+.section::-webkit-scrollbar {
+  display: none;
 }

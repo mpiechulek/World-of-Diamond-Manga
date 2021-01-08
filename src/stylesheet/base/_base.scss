@@ -11,6 +11,7 @@ html {
 }
 
 body {
+  position: relative;
   font-family: Garamond;
   font-size: 1.6rem;
   color: $color-white;
@@ -22,4 +23,8 @@ body {
 
   text-rendering: optimizeLegibility;
   -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {  
+  display: none;
 }
