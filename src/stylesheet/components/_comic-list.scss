@@ -1,12 +1,13 @@
 .comic-section {
   position: relative;
-  width: 100%;
+  width: 100%;  
 
   .comic-chapter-list {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 
     .list-chapter {
       background-color: $color-masala;
@@ -19,6 +20,16 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: $color-border-dive-gray;
+        color: $color-gold-sand;
+      }
+
+      &:active {       
+        color: $color-masala;
+      }
     }
   }
 }
