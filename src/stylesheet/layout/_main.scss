@@ -1,7 +1,7 @@
 .main {
   width: 100vw;
   height: 100vh;
-  padding: 2rem 0;
+  padding: 1.2rem 0;
 
   .main-container {
     width: 90rem;
@@ -9,9 +9,9 @@
     margin-right: auto;
     margin-left: auto;
 
-    border: solid 3px $color-border-dive-gray;
+    border: solid 2px $color-border-dive-gray;
     border-radius: 15px;
-    padding: 1.5rem;
+    padding: 1rem;
 
     display: flex;
     flex-direction: column;
