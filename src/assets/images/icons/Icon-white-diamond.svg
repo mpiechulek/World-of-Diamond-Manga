@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="53.349" height="49.753" viewBox="0 0 53.349 49.753">
+  <defs>
+    <filter id="Icon_map-jewelry-store" x="0" y="0" width="53.349" height="49.753" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Icon_map-jewelry-store)">
+    <path id="Icon_map-jewelry-store-2" data-name="Icon map-jewelry-store" d="M36.848,15.8l-.01-.081a1.014,1.014,0,0,0-.1-.289L31.675,7.279s-.645-.8-.8-.8H9.309L2.823,15.149l-.077.08-.01.038a1.422,1.422,0,0,0-.134.28l-.026.077a1.258,1.258,0,0,0,.01.759l.03.087a1.346,1.346,0,0,0,.15.281L18.447,36.614l.032.046a1.357,1.357,0,0,0,.3.28l.091.057a1.614,1.614,0,0,0,.319.15l.089.03a1.541,1.541,0,0,0,.851,0l.106-.038a1.555,1.555,0,0,0,.31-.152l.07-.044a1.244,1.244,0,0,0,.271-.251L36.585,16.8a1.4,1.4,0,0,0,.264-.631l.012-.1.006-.081-.019-.192Zm-8.419-.529,2.235-4.044L32.9,15.266Zm-1.34,2.4h5.3L23.553,28.858Zm-1.312-3.609L22.549,9.675H28.2ZM15.437,17.663h8.514L19.693,31.144Zm.844-2.4,3.412-4.63,3.412,4.63H16.282Zm-2.4-1.575L12.4,9.675h4.439Zm1.956,15.167L7,17.663h5.3ZM9.841,11.25l1.48,4.016H6.881Z" transform="translate(6.98 0.02)" fill="#fff" stroke="#000" stroke-width="1"/>
+  </g>
+</svg>
