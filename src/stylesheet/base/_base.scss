@@ -1,26 +1,27 @@
 html {
-    font-size: 62.5%;   
+  font-size: 62.5%;
 }
 
-*, 
+*,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Garamond;
-    font-size: 1.6rem;
-    color: $color-white;  
-    background-color: $color-masala;
-    overflow-x: hidden;
-    box-sizing: border-box;
+  font-family: Garamond;
+  font-size: 1.6rem;
+  color: $color-white;
+  background-color: $color-masala;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  box-sizing: border-box;
 
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: transparent; 
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
 }
