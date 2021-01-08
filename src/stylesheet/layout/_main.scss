@@ -19,11 +19,12 @@
     align-items: center;
 
     .main-wrapper {
+      position: relative;
       background-color: $color-cannon-pink;
       border: none;
       border-radius: 5px;
-
-      padding: 2rem;
+      padding: 1.5rem;
+      padding-bottom: 4.5rem;
       width: 100%;
       flex-direction: column;
       display: flex;
