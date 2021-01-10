@@ -14,17 +14,22 @@
 .home-section-text {
   font-size: 1.6rem;
   letter-spacing: 1px;
-  text-align: left;    
+  text-align: left;
   font-weight: 200;
 }
 
 .chapter-list-text {
   font-size: 1.6rem;
-  letter-spacing: 3px;  
+  letter-spacing: 3px;
 }
 
 .footer-text {
   font-size: 1.4rem;
-  letter-spacing: 2px;  
+  letter-spacing: 2px;
 }
 
+.chapter-page-numbe-text {
+  color: $color-white;
+  letter-spacing: 1px;
+  font-size: 1.6rem;
+}

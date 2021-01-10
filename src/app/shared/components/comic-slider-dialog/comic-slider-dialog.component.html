@@ -1,17 +1,29 @@
 <div class="image-slider">
 
-    <button mat-button mat-dialog-close><img src="" alt="close"></button>
-    
-    <img src="" alt="">
-
-    <div class="image-slider__navigation">
-        <button class='image-nav-btn image-nav-btn-left'>
-            <img src="" alt="right">
-        </button>
-        <p class="chapter-page-number">000</p>
-        <button class='image-nav-btn image-nav-btn-left'>
-            <img src="" alt="left">
+    <div class="image-slider__close-btn-wrapper">
+        <button class="dialog-close-btn" mat-dialog-close>
+            <img src="./assets/images/icons/Icon-close.svg" alt="close">
         </button>
     </div>
+
+    <div class="image-slider__image">
+
+         <img  src="./assets/images/comic/chapter-1/Obraz 001.jpg" alt="comic-page"> 
+    </div>
+
+    <div class="image-slider__navigation">
+
+        <button class='image-nav-btn image-nav-btn-left' (click)="onPageBack()">
+            <img src="./assets/images/icons/Icon-arrow-left.svg" alt="right">
+        </button>
+        
+        <p class="chapter-page-number chapter-page-numbe-text">000</p>
+
+        <button class='image-nav-btn image-nav-btn-left' (click)="onPageForward()">
+            <img src="./assets/images/icons/Icon-arrow-right.svg" alt="left">
+        </button>
+
+    </div>
+
 
 </div>

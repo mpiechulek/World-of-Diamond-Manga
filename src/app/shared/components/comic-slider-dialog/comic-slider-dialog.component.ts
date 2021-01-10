@@ -14,6 +14,14 @@ export class ComicSliderDialogComponent implements OnInit {
   ngOnInit(): void {  
     
   }
+
+  onPageBack() {
+
+  }
+
+  onPageForward() {
+    
+  }
   
 
 }
