@@ -10,15 +10,15 @@
 
             <div class="comic-section">
                 <ul class="comic-chapter-list">
-
                     <li class="list-chapter" *ngFor="let chapter of comicArr" (click)="onChooseChapter(chapter.name)">
                         <a class="chapter-list-text">{{chapter.display}}</a>
-                    </li>          
-                   
+                    </li>                  
                 </ul>
-            </div>            
+            </div>  
+
         </article>       
 
         <app-footer-ui style="width:100%"></app-footer-ui>
+        
     </div>
 </main>

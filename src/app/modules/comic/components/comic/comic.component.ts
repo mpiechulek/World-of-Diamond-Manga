@@ -26,18 +26,15 @@ export class ComicComponent implements OnInit {
     // Finding the chapter data
    const choosenChapter: ChapterModel = this.comicArr.find((chapter) => {
       return chapter.name === chapterName;
-    });    
-    
+    });        
    
     let dialogRef =  this.matDialog.open(ComicSliderDialogComponent, {
         data: {
           chapter: choosenChapter   
         }       
-      });
- 
+      }); 
 
     // Emmiting the chapter data to the container component
     // this.chapterEmit.emit(choosenChapter);
   }
-
 }
