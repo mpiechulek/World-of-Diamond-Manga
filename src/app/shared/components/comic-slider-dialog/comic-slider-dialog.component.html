@@ -8,7 +8,7 @@
 
     <div class="image-slider__image">
 
-         <img  src="./assets/images/comic/chapter-1/Obraz 001.jpg" alt="comic-page"> 
+        <img [src]="currentPageUrl" alt="comic-page">
     </div>
 
     <div class="image-slider__navigation">
@@ -16,8 +16,8 @@
         <button class='image-nav-btn image-nav-btn-left' (click)="onPageBack()">
             <img src="./assets/images/icons/Icon-arrow-left.svg" alt="right">
         </button>
-        
-        <p class="chapter-page-number chapter-page-numbe-text">000</p>
+
+        <p class="chapter-page-number chapter-page-numbe-text">{{currentPageName}}</p>
 
         <button class='image-nav-btn image-nav-btn-left' (click)="onPageForward()">
             <img src="./assets/images/icons/Icon-arrow-right.svg" alt="left">

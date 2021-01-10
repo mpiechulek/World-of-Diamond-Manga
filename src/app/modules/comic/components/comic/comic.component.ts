@@ -12,31 +12,27 @@ export class ComicComponent implements OnInit {
 
   comicArr: ChapterModel[] = [];
 
-  @Output() chapterEmit = new EventEmitter<ChapterModel>();
-
-  constructor(private chapterPagesService: ChapterPagesService,
-    private matDialog: MatDialog) { }
+  constructor(
+    private chapterPagesService: ChapterPagesService,
+    private matDialog: MatDialog
+  ) { }
 
   ngOnInit(): void {
-   this.comicArr =  this.chapterPagesService.comicArr;
+    this.comicArr = this.chapterPagesService.comicArr;
   }
 
   onChooseChapter(chapterName: string) {
 
     // Finding the chapter data
-   const choosenChapter: ChapterModel = this.comicArr.find((chapter) => {
+    const choosenChapter: ChapterModel = this.comicArr.find((chapter) => {
       return chapter.name === chapterName;
-    });        
-   
-    let dialogRef =  this.matDialog.open(ComicSliderDialogComponent, {
-        data: {
-          chapter: choosenChapter,
-          panelClass: 'custom-dialog-box'  
-         
-        }       
-      }); 
+    });
 
-    // Emmiting the chapter data to the container component
-    // this.chapterEmit.emit(choosenChapter);
+    let dialogRef = this.matDialog.open(ComicSliderDialogComponent, {
+      data: {
+        chapter: choosenChapter,
+        panelClass: 'custom-dialog-box'
+      }
+    });
   }
 }
