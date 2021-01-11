@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-comic',
   templateUrl: './comic.container.html'
 })
+
 export class ComicContainerComponent implements OnInit {
 
   constructor() { }

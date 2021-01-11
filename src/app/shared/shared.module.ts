@@ -5,23 +5,30 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HamburgerMenuComponent } from './components/hamburger-menu/hamburger-menu.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
+import { ComicSliderDialogComponent } from './components/comic-slider-dialog/comic-slider-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import {MAT_EXPANSION_PANEL_DEFAULT_OPTIONS, MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
     FooterComponent,
     NavbarComponent,
     HamburgerMenuComponent,
-    HeaderComponent
+    HeaderComponent,
+    ComicSliderDialogComponent
   ],
   imports: [
     CommonModule,
-    RouterModule 
+    RouterModule,
+    MatExpansionModule,
+    MatDialogModule,
   ],
+  entryComponents: [ComicSliderDialogComponent],
   exports: [
     FooterComponent,
     NavbarComponent,
     HamburgerMenuComponent,
-    HeaderComponent
-  ]
+    HeaderComponent    
+  ]  
 })
 export class SharedModule { }

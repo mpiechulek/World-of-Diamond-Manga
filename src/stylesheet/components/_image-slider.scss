@@ -1,0 +1,46 @@
+.image-slider {
+  background-color: $color-masala;
+  height: 95vh;
+  width: 100rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 7% 86% 7%;
+  margin: 0.5rem;
+
+  &__close-btn-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 1rem 1rem 0 0;
+  }
+
+  &__image {
+    width: auto;
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .chapter-page-number {
+      margin: 0 5rem;
+    }
+  }
+}
+
+// Overwriting mat dialog styles
+mat-dialog-container {
+  padding: 0 !important;
+  background-color: $color-masala !important;
+}
