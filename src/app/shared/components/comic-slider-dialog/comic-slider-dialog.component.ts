@@ -1,5 +1,6 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, HostListener, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { KeyCode } from 'src/app/data/enums/key-code.enum';
 import { ChapterModel } from 'src/app/data/models/chapter.model';
 
 @Component({
@@ -22,6 +23,17 @@ export class ComicSliderDialogComponent implements OnInit {
     this.generatePageData(this.currentPageNumber);
   }
 
+  //  Listing for arrow events
+  @HostListener('window:keyup', ['$event'])
+  keyEvent(event: KeyboardEvent) {
+    if (event.keyCode === KeyCode.LEFT_ARROW) {
+      this.onPageBack();
+    } else if (event.keyCode === KeyCode.RIGHT_ARROW) {
+      this.onPageForward();
+    }
+  }
+
+  //
   onPageBack() {
     this.currentPageNumber--;
 
@@ -32,6 +44,7 @@ export class ComicSliderDialogComponent implements OnInit {
     this.generatePageData(this.currentPageNumber);
   }
 
+  //
   onPageForward() {
     this.currentPageNumber++;
 
@@ -42,6 +55,7 @@ export class ComicSliderDialogComponent implements OnInit {
     this.generatePageData(this.currentPageNumber);
   }
 
+  //
   generatePageData(pageNumber: number) {
 
     this.currentPageName =
