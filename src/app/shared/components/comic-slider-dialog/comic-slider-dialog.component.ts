@@ -1,4 +1,4 @@
-import { Component, HostListener, Inject, OnInit } from '@angular/core';
+import { AfterViewInit, Component, HostListener, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { KeyCode } from 'src/app/data/enums/key-code.enum';
 import { ChapterModel } from 'src/app/data/models/chapter.model';
@@ -8,7 +8,7 @@ import { ChapterModel } from 'src/app/data/models/chapter.model';
   templateUrl: './comic-slider-dialog.component.html'
 
 })
-export class ComicSliderDialogComponent implements OnInit {
+export class ComicSliderDialogComponent implements OnInit, AfterViewInit {
 
   galleryUrl = './assets/images/comic/';
   currentPageUrl: string;
@@ -21,6 +21,11 @@ export class ComicSliderDialogComponent implements OnInit {
   ngOnInit(): void {
     this.maxChapterPages = parseInt(this.data.chapter.length);
     this.generatePageData(this.currentPageNumber);
+  }
+
+  ngAfterViewInit(){
+    console.log('dasddada');   
+
   }
 
   //  Listing for arrow events
