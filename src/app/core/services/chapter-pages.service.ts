@@ -9,24 +9,13 @@ import { ComicSliderDialogComponent } from 'src/app/shared/components/comic-slid
 export class ChapterPagesService {
 
   comicArr = [
-    { name: 'chapter-1', display: 'Chapter 1', length: "20", filename: "ch-001" },
-    { name: 'chapter-2', display: 'Chapter 2', length: "20", filename: "ch-002" },
-    { name: 'chapter-3', display: 'Chapter 3', length: "20", filename: "ch-003" },
-    { name: 'chapter-4', display: 'Chapter 4', length: "20", filename: "ch-004" },
-    { name: 'chapter-5', display: 'Chapter 5', length: "20", filename: "ch-005" }
+    { name: 'chapter-1', display: 'Chapter 1', length: "46", filename: "ch-001" },
+    { name: 'chapter-2', display: 'Chapter 2', length: "18", filename: "ch-002" },
+    { name: 'chapter-3', display: 'Chapter 3', length: "22", filename: "ch-003" },
+    { name: 'chapter-4', display: 'Chapter 4', length: "15", filename: "ch-004" },
+    { name: 'chapter-5', display: 'Chapter 5', length: "31", filename: "ch-005" }
   ];
 
   comicUrl = 'assets/images/comic'
-
-  // constructor(private matDialog: MatDialog) {
-
-  // }
-
-  openChapter(chapter: ChapterModel) {
-    // this.matDialog.open(ComicSliderDialogComponent, {
-    //   data: {
-    //     chapter: chapter
-    //   }
-    // });
-  }
+ 
 }
