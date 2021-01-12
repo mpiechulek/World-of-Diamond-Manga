@@ -1,27 +1,29 @@
-
 .main-header {
-    width: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr;
 
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr;
+  @include respond(tab-port) {
+    margin-bottom: 1rem;
+  }
 
-    &__hamburger-wrapper {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
+  &__hamburger-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .header-main {
+      margin: 0 1rem;
     }
 
-
-    &__wrapper {
-        display:flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    
-        .header-main{
-            margin: 0 1rem;
-        }
-    
-    }
+  }
 }

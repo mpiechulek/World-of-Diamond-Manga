@@ -2,31 +2,58 @@
   position: relative;
   width: 40rem;
 
+  @include respond(tab-port) {
+    width: auto;
+    margin-bottom: 2rem;
+  }
+
   .logo-ball {
-    position: absolute;
+    // position: absolute;
     width: 15rem;
     height: 15rem;
     background-color: $color-gold-sand;
     border-radius: 50%;
     z-index: 1;
+
+    @include respond(tab-port) {
+      width: 9rem;
+      height: 9rem;
+    }
   }
 
   .logo-diamond-1,
   .logo-diamond-2 {
     position: absolute;
     width: 13rem;
+
+    @include respond(tab-port) {
+      width: 8rem;     
+    }
   }
 
   .logo-diamond-1 {
-      top: 25%;
-      left: 22%;
-      z-index: 3;
+    top: 25%;
+    left: 22%;
+    z-index: 3;
+
+    @include respond(tab-port) {
+      top: 41%;
+      left: 25%;
+    }
   }
 
   .logo-diamond-2 {
     top: 23%;
     left: 17%;
     z-index: 2;
+
+    @include respond(tab-port) {
+      top: 38%;
+      left: 19%;
+    }
   }
 
 }
+
+
+@include respond(tab-port) {}

@@ -1,6 +1,11 @@
 .navbar {
   margin-top: 1.2rem;  
   margin-bottom: 2.5rem;  
+  display: block;
+
+  @include respond(tab-land) {
+    display: none;
+   }
 
   &__list {
     display: flex;

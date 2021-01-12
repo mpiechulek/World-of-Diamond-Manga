@@ -3,6 +3,10 @@
   font-weight: 400;
   line-height: 1.13;
   letter-spacing: 6px;
+
+  @include respond(tab-port) {
+    font-size: 4.2rem;
+  }
 }
 
 .navbar-tag-text {
@@ -16,16 +20,29 @@
   letter-spacing: 1px;
   text-align: left;
   font-weight: 200;
+
+  @include respond(tab-port) {
+    text-align: center;
+  }
 }
 
 .chapter-list-text {
   font-size: 1.6rem;
   letter-spacing: 3px;
+
+  @include respond(tab-port) {
+    font-size: 2rem;    
+  }
 }
 
 .footer-text {
   font-size: 1.4rem;
   letter-spacing: 2px;
+
+  @include respond(tab-port) {
+    font-size: 1.2rem;
+    text-align: center;
+  }
 }
 
 .chapter-page-numbe-text {

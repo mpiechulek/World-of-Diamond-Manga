@@ -3,8 +3,8 @@
 /*
 0 - 450px : Phone-small
 450 - 600px : Phone
-600 - 900px : Tablet portrait
-900 - 1200px : Tablet landscape
+600 - 800px : Tablet portrait
+800 - 1200px : Tablet landscape
 [1200 -1800] : normal styles apply
 1800px + : Big desktop
 
@@ -37,10 +37,10 @@ $breakpoint argument choice:
     }
 
     @if $breakpoint == tab-port {
-        @media only screen and (max-width: 56.25em) {
+        @media only screen and (max-width: 50em) {
             @content
         }; 
-        // 900px
+        // 800px
     }
 
     @if $breakpoint == tab-land {

@@ -3,6 +3,9 @@
   height: 100vh;
   padding: 1.2rem 0;
 
+  @include respond(tab-port) {
+    padding: 0;
+  }
   
   .main-container {
     position: relative;
