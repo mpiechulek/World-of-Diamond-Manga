@@ -1,13 +1,32 @@
 .about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  &__wrapper {}
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem
+  }
 
-  &__header {}
+  &__wrapper {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+  }
 
-  &__paragraph {}
+  &__header {
+    display: inline-block;
+   
+    margin-bottom: 1.2rem;
+  }
 
+  &__paragraph {
+    display: inline-block;    
+  }
 
   &__image {}
-
 
 }
