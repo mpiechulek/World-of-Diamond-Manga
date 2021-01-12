@@ -30,8 +30,8 @@ export class ComicComponent implements OnInit {
 
     let dialogRef = this.matDialog.open(ComicSliderDialogComponent, {
       data: {
-        chapter: choosenChapter,
-        panelClass: 'custom-dialog-box'
+        chapter: choosenChapter,        
+        panelClass: 'full-width-dialog'
       }
     });
   }

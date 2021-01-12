@@ -7,6 +7,10 @@
     -moz-transform: rotate(-3deg);
     transform: rotate(-3deg);
   }
+
+  @include respond(tab-land) {
+    pointer-events: none;
+  }
 }
 
 .text-rotate-right {
@@ -17,5 +21,9 @@
     -webkit-transform: rotate(3deg);
     -moz-transform: rotate(3deg);
     transform: rotate(3deg);
+  }
+
+  @include respond(tab-land) {
+    pointer-events: none;
   }
 }

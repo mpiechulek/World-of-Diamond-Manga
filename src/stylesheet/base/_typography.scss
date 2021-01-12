@@ -5,7 +5,7 @@
   letter-spacing: 6px;
 
   @include respond(tab-port) {
-    font-size: 4.2rem;
+    font-size: 4.4rem;
   }
 }
 
@@ -13,6 +13,10 @@
   font-size: 1.8rem;
   font-weight: 500;
   letter-spacing: 2px;
+  text-decoration: none;
+  @include respond(tab-port) {
+    font-size: 4rem;
+  }
 }
 
 .home-section-text {

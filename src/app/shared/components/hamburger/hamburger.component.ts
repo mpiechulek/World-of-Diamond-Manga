@@ -16,6 +16,8 @@ export class HamburgerComponent implements OnInit {
 
   toggleOpen() {
     this.isOpen = !this.isOpen;
+    console.log(this.isOpen);
+    
   }
 
 }
