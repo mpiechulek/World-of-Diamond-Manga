@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
 import { ComicSliderDialogComponent } from './components/comic-slider-dialog/comic-slider-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MAT_EXPANSION_PANEL_DEFAULT_OPTIONS, MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
@@ -22,6 +23,7 @@ import {MAT_EXPANSION_PANEL_DEFAULT_OPTIONS, MatExpansionModule} from '@angular/
     RouterModule,
     MatExpansionModule,
     MatDialogModule,
+    MatProgressSpinnerModule
   ],
   entryComponents: [ComicSliderDialogComponent],
   exports: [
