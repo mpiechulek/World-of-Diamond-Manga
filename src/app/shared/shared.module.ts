@@ -9,6 +9,7 @@ import { ComicSliderDialogComponent } from './components/comic-slider-dialog/com
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MAT_EXPANSION_PANEL_DEFAULT_OPTIONS, MatExpansionModule} from '@angular/material/expansion';
+import { HamburgerComponent } from './components/hamburger/hamburger.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {MAT_EXPANSION_PANEL_DEFAULT_OPTIONS, MatExpansionModule} from '@angular/
     NavbarComponent,
     HamburgerMenuComponent,
     HeaderComponent,
-    ComicSliderDialogComponent
+    ComicSliderDialogComponent,
+    HamburgerComponent
   ],
   imports: [
     CommonModule,
@@ -30,7 +32,8 @@ import {MAT_EXPANSION_PANEL_DEFAULT_OPTIONS, MatExpansionModule} from '@angular/
     FooterComponent,
     NavbarComponent,
     HamburgerMenuComponent,
-    HeaderComponent    
+    HeaderComponent,
+    HamburgerComponent  
   ]  
 })
 export class SharedModule { }

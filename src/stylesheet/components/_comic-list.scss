@@ -24,22 +24,21 @@
       transition: all 0.3s ease-in-out;
 
       .shaper-arrow {
-        display: none;       
+        display: none;  
+        position: absolute;
+        transition: all 0.3s ;     
+        right: 0;  
+        width: 0;
+        height: 0;
+        border-top: 2.5rem solid transparent;
+        border-right: 4rem solid $color-cannon-pink;
+        border-bottom: 2.5rem solid transparent;
       }
 
       &:hover {
         .shaper-arrow { 
           display: block;
-          position: absolute;
-          right: 0;    
-  
-          width: 0;
-          height: 0;
-          border-top: 2.5rem solid transparent;
-          border-right: 4rem solid $color-cannon-pink;
-          border-bottom: 2.5rem solid transparent;
-        } 
-              
+        }               
         color: $color-gold-sand;
       }
 
