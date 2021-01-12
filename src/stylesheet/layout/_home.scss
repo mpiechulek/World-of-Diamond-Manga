@@ -4,16 +4,35 @@
   flex-direction: row;
   justify-content: space-between;
 
+  @include respond(tab-port) {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   .home-section-text-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
 
+    @include respond(tab-port) {
+      justify-content: center;
+      align-items: center;
+    }
+
     .home-text-wrapper {
       margin-top: 2rem;
       margin-right: 3rem;
       width: 80%;
+
+      @include respond(tab-port) {
+        width: 100%;
+        margin-top: 1rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+      }
     }
 
     .line-shape-gold {
@@ -21,13 +40,22 @@
       height: 0.4rem;
       margin-top: 2rem;
       width: 95%;
+      @include respond(tab-port) {
+        height: 0.2rem;
+      }
     }
 
     .line-shape-dark {
-      background-color: $color-mine-shaft;   
+      background-color: $color-mine-shaft;
       height: 0.4rem;
       margin-top: 1rem;
       width: 70%;
+
+      @include respond(tab-port) {
+        width: 95%;
+        height: 0.1rem;
+        margin-bottom: 2rem;
+      }
     }
   }
 }

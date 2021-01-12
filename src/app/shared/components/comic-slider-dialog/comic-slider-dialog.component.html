@@ -1,4 +1,4 @@
-<div class="image-slider">
+<div class="image-slider" *ngIf="!isLoading">
 
     <div class="image-slider__close-btn-wrapper">
         <button class="dialog-close-btn" mat-dialog-close>
@@ -7,7 +7,6 @@
     </div>
 
     <div class="image-slider__image">
-
         <img [src]="currentPageUrl" alt="comic-page">
     </div>
 
@@ -22,8 +21,9 @@
         <button class='image-nav-btn image-nav-btn-left' (click)="onPageForward()">
             <img src="./assets/images/icons/Icon-arrow-right.svg" alt="left">
         </button>
-
+        
     </div>
-
-
+    
 </div>
+
+<mat-spinner *ngIf="isLoading"></mat-spinner>

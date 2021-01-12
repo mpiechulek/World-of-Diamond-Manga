@@ -1,17 +1,24 @@
 .image-slider {
+  position: relative;
   background-color: $color-masala;
-  height: 95vh;
-  width: 100rem;
+  height: 100vh;
+  width: 95rem;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 7% 86% 7%;
+  grid-template-rows: 93% 7%;
   margin: 0.5rem;
 
+  @include respond(tab-land) {
+    display: none;
+  }
+
   &__close-btn-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-end;
+    position: absolute;
+    right: 0;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: flex-end;
+    // align-items: flex-end;
     margin: 1rem 1rem 0 0;
   }
 
@@ -35,6 +42,7 @@
 
     .chapter-page-number {
       margin: 0 5rem;
+      width: 15rem;
     }
   }
 }
@@ -42,5 +50,12 @@
 // Overwriting mat dialog styles
 mat-dialog-container {
   padding: 0 !important;
-  background-color: $color-masala !important;
+  background-color: $color-masala !important;  
 }
+
+.cdk-overlay-container {
+  @include respond(tab-land) {
+    display: none;
+  }
+}
+

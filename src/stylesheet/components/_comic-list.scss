@@ -1,6 +1,6 @@
 .comic-section {
   position: relative;
-  width: 100%;    
+  width: 100%;
 
   .comic-chapter-list {
     display: flex;
@@ -10,6 +10,7 @@
 
 
     .list-chapter {
+      position: relative;
       background-color: $color-masala;
       list-style: none;
       height: 5rem;
@@ -22,12 +23,31 @@
       align-items: center;
       transition: all 0.3s ease-in-out;
 
+      @include respond(tab-land) {
+        width: 90%;
+      }
+
+      .shaper-arrow {
+        display: none;
+        position: absolute;
+        transition: all 0.3s;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 2.5rem solid transparent;
+        border-right: 4rem solid $color-cannon-pink;
+        border-bottom: 2.5rem solid transparent;
+      }
+
       &:hover {
-        background-color: $color-border-dive-gray;
+        .shaper-arrow {
+          display: block;
+        }
+
         color: $color-gold-sand;
       }
 
-      &:active {       
+      &:active {
         color: $color-masala;
       }
     }

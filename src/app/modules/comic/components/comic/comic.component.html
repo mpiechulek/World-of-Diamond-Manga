@@ -1,8 +1,10 @@
-<main class="main">
+<app-hamburger-menu></app-hamburger-menu>
 
+<main class="main">
+    
     <div class="main-container">
 
-        <app-header-ui></app-header-ui>
+        <app-header-ui style="width: 100%"></app-header-ui>
 
         <app-navbar-ui style="width: 100%"></app-navbar-ui>
 
@@ -12,6 +14,7 @@
                 <ul class="comic-chapter-list">
                     <li class="list-chapter" *ngFor="let chapter of comicArr" (click)="onChooseChapter(chapter.name)">
                         <a class="chapter-list-text">{{chapter.display}}</a>
+                        <div class="shaper-arrow"></div>
                     </li>                  
                 </ul>
             </div>  

@@ -1,11 +1,20 @@
 .navbar {
   margin-top: 1.2rem;  
   margin-bottom: 2.5rem;  
+  display: block;
+
+  @include respond(tab-land) {
+    display: none;
+   }
 
   &__list {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    @include respond(tab-land) {
+      flex-direction: column;
+     }
   }
 
   &__list-item {
@@ -20,9 +29,14 @@
     padding: 1rem 8rem;
     transition: all 0.3s ease-in-out;
 
+    @include respond(tab-land) {
+      padding: 1rem 5rem;
+      pointer-events: none;
+    }
+
     &:hover {
       color: $color-gold-sand;
-    }
+    }   
 
     &:active {
       color: $color-white;
