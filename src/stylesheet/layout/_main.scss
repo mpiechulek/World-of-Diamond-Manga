@@ -3,20 +3,35 @@
   height: 100vh;
   padding: 1.2rem 0;
 
+  
   .main-container {
+    position: relative;
     width: 90rem;
     height: 100%;
     margin-right: auto;
     margin-left: auto;
-
+    
     border: solid 2px $color-border-dive-gray;
     border-radius: 15px;
     padding: 1rem;
-
+    
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+    @include respond(tab-land) {
+      width: 80%;
+      border: none;
+    }
+
+    @include respond(tab-port) {
+      width: 90%;      
+    }
+
+    @include respond(phone) {
+      width: 100%;     
+    }
 
     .main-wrapper {
       position: relative;

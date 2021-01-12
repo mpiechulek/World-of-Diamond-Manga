@@ -23,11 +23,15 @@
       align-items: center;
       transition: all 0.3s ease-in-out;
 
+      @include respond(tab-land) {
+        width: 90%;
+      }
+
       .shaper-arrow {
-        display: none;  
+        display: none;
         position: absolute;
-        transition: all 0.3s ;     
-        right: 0;  
+        transition: all 0.3s;
+        right: 0;
         width: 0;
         height: 0;
         border-top: 2.5rem solid transparent;
@@ -36,9 +40,10 @@
       }
 
       &:hover {
-        .shaper-arrow { 
+        .shaper-arrow {
           display: block;
-        }               
+        }
+
         color: $color-gold-sand;
       }
 

@@ -1,111 +1,120 @@
 .hamburger-menu {
-    position: relative;
-    width: 3.5rem;
-    height: 3.5rem;
-    cursor: pointer;
-    display: none;
-    margin-left: 2rem;
-    z-index: 11000;
+  position: relative;
+  // width: 3.5rem;
+  // height: 3.5rem;
+  cursor: pointer;
+  display: none;
+  margin-left: 2rem;
+  z-index: 1000;
 
-    // @include respond-to(medium) {
-    //     display: block;
-    // }
+  @include respond(tab-land) {
+    display: block;
+  }
+
 }
 
-.hamburger {
-    width: 3rem;
-    height: 0.3rem;
-    // background: $color-text-graphit;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: 0.5s;
+// Hamburger animated icon 
+.hamburger {  
+  width: 3rem;
+  height: 0.3rem;
+  background: $color-white;
+  position: absolute; 
+  transition: 0.5s;
 }
 
 .hamburger::before,
 .hamburger::after {
-    content: '';
-    position: absolute;
-    width: 3rem;
-    height: 0.3rem;
-    // background: $color-text-graphit;
-    transition: 0.5s;
+  content: '';
+  position: absolute;
+  width: 3rem;
+  height: 0.3rem;
+  background: $color-white;
+  transition: 0.5s;
 }
 
 .hamburger::before {
-    top: -10px;
+  top: -12px;
 }
 
 .hamburger::after {
-    top: 10px;
+  top: 12px;
+}
+
+@include respond(tab-land) {
+  .hamburger::before {
+    top: -7px;
+  }
+  
+  .hamburger::after {
+    top: 7px;
+  }
 }
 
 .hamburger-menu.active .hamburger {
-    background: transparent;
+  background: transparent;
 }
 
 .hamburger-menu.active .hamburger::before {
-    top: 0;
-    transform: rotate(45deg);
+  top: 0;
+  transform: rotate(45deg);
 }
 
 .hamburger-menu.active .hamburger::after {
-    top: 0;
-    transform: rotate(135deg);
+  top: 0;
+  transform: rotate(135deg);
 }
 
 // =============================================================================
 
 .main-menu-hamburger {
-    top: 0;
-    left: 0;
-    z-index: 10000;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  position: absolute;
+  // background-color: $color-orange-bright;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+
+  .main-menu-hamburger-container {
+    width: auto;
+    min-height: 50rem;
     position: absolute;
-    // background-color: $color-orange-bright;
-    width: 100%;
-    height: 100%;
-    transition: 0.5s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-    .main-menu-hamburger-container {
-        width: auto;
-        min-height: 50rem;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
 
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: column;
-
-        .hamburger-menu-header-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 2rem;
-        }
-
-        .hamburger-menu-logo-container {}
-
-        .hamburger-menu-button-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            .hamburger-menu-button-wrapper {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 100%;
-                margin-top: 3rem;                
-
-                .margin-right {
-                    margin-right: 2rem;
-                }
-            }
-        }
+    .hamburger-menu-header-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
     }
+
+    .hamburger-menu-logo-container {}
+
+    .hamburger-menu-button-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .hamburger-menu-button-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 3rem;
+
+        .margin-right {
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
 }
