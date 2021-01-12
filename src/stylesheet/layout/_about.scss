@@ -28,13 +28,13 @@
 
   &__image {
     margin: 0 3rem;
-    max-height: 30rem;
+    max-height: 25rem;
     max-width: 40%;
     transition: transform .3s;
     /* Animation */
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.15);
       /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
     }
   }
