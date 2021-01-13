@@ -17,15 +17,17 @@ export class ComicSliderDialogComponent implements OnInit, AfterViewInit {
   maxChapterPages: number;
   isLoading: boolean= true;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: { chapter: ChapterModel }) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: { chapter: ChapterModel }) { 
+    
+  }
 
   ngOnInit(): void {
     this.maxChapterPages = parseInt(this.data.chapter.length);
     this.generatePageData(this.currentPageNumber);
+    this.isLoading  = false;
   }
 
   ngAfterViewInit(){
-    this.isLoading  = false;
   }
 
   //  Listing for arrow events
