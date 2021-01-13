@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HamburgerMenuService } from 'src/app/core/services/hamburger-menu.service';
 
 @Component({
   selector: 'app-hamburger',
@@ -7,17 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HamburgerComponent implements OnInit {
 
-  isOpen: boolean = false;
+  isOpen: boolean;
 
-  constructor() { }
+  constructor(private hamburgerMenuService: HamburgerMenuService) { }
 
   ngOnInit(): void {
+    this.isOpen = this.hamburgerMenuService.getOpenState();
   }
 
   toggleOpen() {
-    this.isOpen = !this.isOpen;
-    console.log(this.isOpen);
-    
+    this.isOpen = this.hamburgerMenuService.getOpenState();    
   }
 
 }
