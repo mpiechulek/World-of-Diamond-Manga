@@ -1,20 +1,20 @@
-<nav class="main-menu-hamburger">
+<nav class="main-menu-hamburger" *ngIf="isOpen">
 
     <div class="main-menu-hamburger-container">
         
         <h1 class="header-main">Diamnond</h1>
 
-        <ul>
+        <ul> 
             <li class="hamburger-menu-listitem">
-                <a class="navbar-tag-text" routerLink="/home" routerLinkActive="router-link-color">Home</a>
+                <a class="navbar-tag-text" (click)="onChangeVisibility()" routerLink="/home" routerLinkActive="router-link-color">Home</a>
             </li>
 
             <li class="hamburger-menu-listitem">
-                <a class="navbar-tag-text" routerLink="/comic" routerLinkActive="router-link-color">Comic</a>
+                <a class="navbar-tag-text" (click)="onChangeVisibility()" routerLink="/comic" routerLinkActive="router-link-color">Comic</a>
             </li>
 
             <li class="hamburger-menu-listitem">
-                <a class="navbar-tag-text" routerLink="/about" routerLinkActive="router-link-color">About</a>
+                <a class="navbar-tag-text" (click)="onChangeVisibility()"  routerLink="/about" routerLinkActive="router-link-color">About</a>
             </li>
         </ul>
 

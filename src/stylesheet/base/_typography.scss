@@ -17,6 +17,10 @@
   @include respond(tab-port) {
     font-size: 4rem;
   }
+
+  &:active {
+    color: $color-white;
+  }
 }
 
 .home-section-text {

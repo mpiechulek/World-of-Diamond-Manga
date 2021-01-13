@@ -4,26 +4,29 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeLayoutComponent } from './layout/home/home-layout.component';
-import { AboutLayoutComponent } from './layout/about/about-layout.component';
-import { ComicLayoutComponent } from './layout/comic/comic-layout.component';
-import { ComicSliderDialogComponent } from './shared/components/comic-slider-dialog/comic-slider-dialog.component';
+import { MainLayoutComponent } from './layout/main/main-layout.component';
+import { SharedModule } from './shared/shared.module';
+
+
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeLayoutComponent,
-    AboutLayoutComponent,
-    ComicLayoutComponent
+    MainLayoutComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule 
- 
+    BrowserAnimationsModule,
+    SharedModule
+
   ],
   providers: [],
-  bootstrap: [AppComponent],  
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

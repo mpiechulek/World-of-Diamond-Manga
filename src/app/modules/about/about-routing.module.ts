@@ -5,18 +5,13 @@ import { AboutContainerComponent } from './page/about/about.container';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'about',
-    pathMatch: 'full'
-  },
-  {
-    path: '',
     children: [
       {
-        path: '',
+        path: 'about',
         component: AboutContainerComponent
       }
     ]
-  }
+  } 
 ];
 
 @NgModule({

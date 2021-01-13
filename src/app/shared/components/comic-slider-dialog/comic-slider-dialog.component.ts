@@ -17,15 +17,17 @@ export class ComicSliderDialogComponent implements OnInit, AfterViewInit {
   maxChapterPages: number;
   isLoading: boolean= true;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: { chapter: ChapterModel }) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: { chapter: ChapterModel }) { 
+    
+  }
 
   ngOnInit(): void {
     this.maxChapterPages = parseInt(this.data.chapter.length);
     this.generatePageData(this.currentPageNumber);
+    this.isLoading  = false;
   }
 
   ngAfterViewInit(){
-    this.isLoading  = false;
   }
 
   //  Listing for arrow events
@@ -69,9 +71,7 @@ export class ComicSliderDialogComponent implements OnInit, AfterViewInit {
       this.currentPageNumber +
       '/' +
       this.data.chapter.length;
-
-    console.log(this.currentPageName);
-
+    
     this.currentPageUrl =
       './assets/images/comic/' +
       this.data.chapter.name +
@@ -80,8 +80,7 @@ export class ComicSliderDialogComponent implements OnInit, AfterViewInit {
       '-' +
       pageNumber +
       '.jpg';
-
-    console.log(this.currentPageUrl);
+   
   }
 
 }
