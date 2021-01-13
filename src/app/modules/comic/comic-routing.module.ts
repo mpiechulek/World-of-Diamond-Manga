@@ -2,17 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ComicContainerComponent } from './page/comic/comic.container';
 
-const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'comic',
-    pathMatch: 'full'
-  },
+const routes: Routes = [  
   {
     path: '',
     children: [
       {
-        path: '',
+        path: 'comic',
         component: ComicContainerComponent
       }
     ]

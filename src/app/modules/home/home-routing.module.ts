@@ -4,15 +4,10 @@ import { HomeContainerComponent } from './page/home/home.container';
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  },
-  {
-    path: '',
+    path: '',  
     children: [
       {
-        path: '',
+        path: 'home',
         component: HomeContainerComponent
       }
     ]
