@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { HamburgerMenuService } from 'src/app/core/services/hamburger-menu.service';
 
 @Component({
@@ -6,13 +7,27 @@ import { HamburgerMenuService } from 'src/app/core/services/hamburger-menu.servi
   templateUrl: './hamburger-menu.component.html'
 
 })
-export class HamburgerMenuComponent implements OnInit {
+export class HamburgerMenuComponent implements OnInit, OnDestroy {
 
-  @Input() isOpen: boolean = false;
+  isOpen: boolean;
+  isOpenSubscription: Subscription;
 
-  constructor(private hamburgerMenuService: HamburgerMenuService) { }
+  constructor(private hamburgerMenuService: HamburgerMenuService) {
+
+  }
 
   ngOnInit(): void {
+    this.isOpenSubscription = this.hamburgerMenuService.getOpenState().subscribe((isOpen) => {
+      this.isOpen = isOpen;
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.isOpenSubscription.unsubscribe();
+  }
+
+  onChangeVisibility() {
+    this.hamburgerMenuService.getOpenState();
   }
 
 }

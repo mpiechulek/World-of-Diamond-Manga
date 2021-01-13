@@ -71,9 +71,7 @@ export class ComicSliderDialogComponent implements OnInit, AfterViewInit {
       this.currentPageNumber +
       '/' +
       this.data.chapter.length;
-
-    console.log(this.currentPageName);
-
+    
     this.currentPageUrl =
       './assets/images/comic/' +
       this.data.chapter.name +
@@ -82,8 +80,7 @@ export class ComicSliderDialogComponent implements OnInit, AfterViewInit {
       '-' +
       pageNumber +
       '.jpg';
-
-    console.log(this.currentPageUrl);
+   
   }
 
 }
