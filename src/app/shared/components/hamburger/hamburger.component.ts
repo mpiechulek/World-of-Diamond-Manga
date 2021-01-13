@@ -26,7 +26,7 @@ export class HamburgerComponent implements OnInit {
   }
 
   toggleOpen() {
-    this.hamburgerMenuService.getOpenState();
+    this.hamburgerMenuService.getChangeOpenState();
   }
 
 }

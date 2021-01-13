@@ -27,7 +27,7 @@ export class HamburgerMenuComponent implements OnInit, OnDestroy {
   }
 
   onChangeVisibility() {
-    this.hamburgerMenuService.getOpenState();
+    this.hamburgerMenuService.getChangeOpenState();
   }
 
 }
