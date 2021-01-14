@@ -25,11 +25,12 @@ export class ComicContainerComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-
     this.windowWidth = event.target.innerWidth;
   }
 
   openChapter(choosenChapter: ChapterModel) {
+
+    this.chapterPagesService.generateChapetPagesUrlList(choosenChapter);
 
     let dialogRef = this.matDialog.open(ComicSliderDialogComponent, {
       data: {

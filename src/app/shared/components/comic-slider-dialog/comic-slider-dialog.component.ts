@@ -25,7 +25,7 @@ export class ComicSliderDialogComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.galleryUrl = this.chapterPagesService.comicUrl;
-    this.maxChapterPages = parseInt(this.data.chapter.length);
+    this.maxChapterPages = this.data.chapter.length;
     this.generatePageData(this.currentPageNumber);
     this.isLoading = false;
   }
