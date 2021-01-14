@@ -12,10 +12,6 @@
     width: auto;
   }
 
-  // @include respond(tab-port) {
-  //   display: none;
-  // }
-
   &__close-btn-wrapper {
     position: absolute;
     right: 0;    
@@ -24,6 +20,9 @@
 
   &__image {
     width: auto;
+    display: flex;
+    justify-content: center;
+    align-items:center;
 
     img {
       display: block;
