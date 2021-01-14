@@ -36,19 +36,20 @@
     }
 
     .main-wrapper {
-      padding: 1rem;    
+      padding: 2rem 1rem;    
       flex-grow: 2;
       display: flex;
       flex-direction: column;
-      overflow: hidden;
-      // align-self: stretch;
+      justify-content: flex-start;
+      align-items: center;
+      overflow: hidden;     
       scrollbar-width: none;
       background-color: $color-cannon-pink;
       border: none;
       border-top-left-radius: 0.5rem;
       border-top-right-radius: 0.5rem;
 
-
+      overflow: scroll;
     }
   }
 }
