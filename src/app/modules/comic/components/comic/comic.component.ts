@@ -20,7 +20,4 @@ export class ComicComponent implements OnInit {
   onChooseChapter(chapterName: ChapterModel) {
     this.choosenChapter.emit(chapterName);
   }
-  
-
-
 }

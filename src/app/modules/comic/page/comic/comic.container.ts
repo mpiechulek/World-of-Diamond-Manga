@@ -24,7 +24,6 @@ export class ComicContainerComponent implements OnInit {
     this.comicArr = this.chapterPagesService.comicArr;   
   }
 
-
   // if the window width is 800 or less then the mobile ballery will be active
   // else the dialog gallery
   openChapter(choosenChapter: ChapterModel) {
@@ -33,6 +32,7 @@ export class ComicContainerComponent implements OnInit {
         data: {
           chapter: choosenChapter
         },
+        // This overwrites the default mat dialog styles
         width: '100vw',
         maxWidth: '100vw',
       }
