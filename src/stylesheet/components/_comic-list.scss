@@ -11,7 +11,7 @@
 
     .chapter-list {
       position: relative;
-      background-color: $color-masala;
+      background-color: $color-mine-shaft;
       list-style: none;
       height: 5rem;
       width: 60%;
@@ -48,7 +48,7 @@
       }
 
       &:active {
-        color: $color-masala;
+        color: $color-mine-shaft;
       }
     }
   }
