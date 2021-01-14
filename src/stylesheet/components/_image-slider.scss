@@ -9,6 +9,10 @@
   margin: 0.5rem;
 
   @include respond(tab-land) {
+    width: auto;
+  }
+
+  @include respond(tab-port) {
     display: none;
   }
 
@@ -54,7 +58,7 @@ mat-dialog-container {
 }
 
 .cdk-overlay-container {
-  @include respond(tab-land) {
+  @include respond(tab-port) {
     display: none;
   }
 }

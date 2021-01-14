@@ -42,6 +42,7 @@ export class ComicContainerComponent implements OnInit {
 
     } else if (this.windowWidth > 800) {
 
+      this.mobileSliderVisibiolity = false;
       let dialogRef = this.matDialog.open(ComicSliderDialogComponent, {
         data: {
           chapter: choosenChapter,
