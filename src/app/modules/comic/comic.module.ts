@@ -16,8 +16,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     CommonModule,
     ComicRoutingModule,
     SharedModule,
-    MatDialogModule
-    
+    MatDialogModule    
   ]
 })
+
 export class ComicModule { }

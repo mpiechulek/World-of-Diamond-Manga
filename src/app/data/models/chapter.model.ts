@@ -1,6 +1,6 @@
 export interface ChapterModel {
     name: string;
     display: string;
-    length: string;
+    length: number;
     filename: string;
 }

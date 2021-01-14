@@ -1,6 +1,6 @@
 .home-section-logo {
   position: relative;
-  width: 40rem;
+  // width: 40rem;
 
   @include respond(tab-port) {
     width: auto;
@@ -32,8 +32,8 @@
   }
 
   .logo-diamond-1 {
-    top: 25%;
-    left: 22%;
+    top: 27.5%;
+    left: 26.5%;
     z-index: 3;
 
     @include respond(tab-port) {

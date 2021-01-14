@@ -3,7 +3,7 @@
   cursor: pointer;
   display: none;
   margin-left: 2rem;
-  z-index: 4000;
+  z-index: 1000;
 
   @include respond(tab-land) {
     display: block;
@@ -71,13 +71,17 @@
 .main-menu-hamburger {
   top: 0;
   left: 0;
-  z-index: 3000;
+  z-index: 500;
   position: absolute;
-  display: block;
+  display: none;
   background-color: $color-cannon-pink;
   width: 100%;
   height: 100%;
   transition: 0.5s;
+
+  @include respond(tab-land) {
+    display: block; 
+  }
 
   .main-menu-hamburger-container {
     width: auto;

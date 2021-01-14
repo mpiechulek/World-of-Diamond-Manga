@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, HostListener, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { ChapterPagesService } from 'src/app/core/services/chapter-pages.service';
 import { KeyCode } from 'src/app/data/enums/key-code.enum';
 import { ChapterModel } from 'src/app/data/models/chapter.model';
 
@@ -10,24 +11,26 @@ import { ChapterModel } from 'src/app/data/models/chapter.model';
 })
 export class ComicSliderDialogComponent implements OnInit, AfterViewInit {
 
-  galleryUrl = './assets/images/comic/';
+  galleryUrl: string;
   currentPageUrl: string;
   currentPageName: string;
   currentPageNumber: number = 1;
   maxChapterPages: number;
-  isLoading: boolean= true;
+  isLoading: boolean = true;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: { chapter: ChapterModel }) { 
-    
-  }
+  constructor(
+        @Inject(MAT_DIALOG_DATA) public data: { chapter: ChapterModel },
+        private chapterPagesService: ChapterPagesService
+    ) { }
 
   ngOnInit(): void {
-    this.maxChapterPages = parseInt(this.data.chapter.length);
+    this.galleryUrl = this.chapterPagesService.comicUrl;
+    this.maxChapterPages = this.data.chapter.length;
     this.generatePageData(this.currentPageNumber);
-    this.isLoading  = false;
+    this.isLoading = false;
   }
 
-  ngAfterViewInit(){
+  ngAfterViewInit() {
   }
 
   //  Listing for arrow events
@@ -40,29 +43,25 @@ export class ComicSliderDialogComponent implements OnInit, AfterViewInit {
     }
   }
 
-  //
+  // Display the previous page 
   onPageBack() {
     this.currentPageNumber--;
-
     if (this.currentPageNumber <= 0) {
       this.currentPageNumber = this.maxChapterPages;
     }
-
     this.generatePageData(this.currentPageNumber);
   }
 
-  //
+  // Display the next page
   onPageForward() {
     this.currentPageNumber++;
-
     if (this.currentPageNumber > this.maxChapterPages) {
       this.currentPageNumber = 1;
     }
-
     this.generatePageData(this.currentPageNumber);
   }
 
-  //
+  // Creating the curent page url link and the page name to display
   generatePageData(pageNumber: number) {
 
     this.currentPageName =
@@ -71,7 +70,7 @@ export class ComicSliderDialogComponent implements OnInit, AfterViewInit {
       this.currentPageNumber +
       '/' +
       this.data.chapter.length;
-    
+
     this.currentPageUrl =
       './assets/images/comic/' +
       this.data.chapter.name +
@@ -80,7 +79,6 @@ export class ComicSliderDialogComponent implements OnInit, AfterViewInit {
       '-' +
       pageNumber +
       '.jpg';
-   
   }
 
 }

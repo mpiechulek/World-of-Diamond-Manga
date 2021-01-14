@@ -2,7 +2,7 @@
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1f;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 0.8rem;
 
   grid-template-areas:
@@ -22,30 +22,39 @@
       "home-gallery-6";
   }
 
-  .home-image {
-    position: absolute;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    object-position: top;
+  .gallery-cell {
+    position: relative;
+    display: inline-block;
     overflow: hidden;
+    border-radius: 5px;
 
-    transition: transform .3s;
-    /* Animation */
+    .home-image {
 
-    &:hover {
-      transform: scale(0.95);
-      /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      object-position: top;
+      filter: blur(1px);
+      transform: scale(1.3);
+      /* Animation */
+      transition: all 2s;
+
+      &:hover {
+        filter: blur(0);
+        /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        transform: scale(1);
+      }
+
+      @include respond(tab-land) {
+        transform: scale(1);
+        filter: blur(0);
+        pointer-events: none;
+      }
+
     }
-
-    @include respond(tab-land) {
-      pointer-events: none;
-    }
-
   }
 
   .home-gallery-1 {
-    position: relative;
     grid-area: home-gallery-1;
   }
 
@@ -73,12 +82,12 @@
     position: relative;
     grid-area: home-gallery-6;
   }
-  
+
   @include respond(tab-port) {
     .home-gallery-image {
       &:hover {
-        height: 40rem;
+        height: 30rem;
       }
-    }  
+    }
   }
 }

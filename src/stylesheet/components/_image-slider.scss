@@ -2,28 +2,27 @@
   position: relative;
   background-color: $color-masala;
   height: 100vh;
-  width: 95rem;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 94% 6%;
   margin: 0.5rem;
 
   @include respond(tab-land) {
-    display: none;
+    width: auto;
   }
 
   &__close-btn-wrapper {
     position: absolute;
-    right: 0;
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: flex-end;
-    // align-items: flex-end;
+    right: 0;    
     margin: 1rem 1rem 0 0;
   }
 
   &__image {
     width: auto;
+    display: flex;
+    justify-content: center;
+    align-items:center;
 
     img {
       display: block;
@@ -52,10 +51,3 @@ mat-dialog-container {
   padding: 0 !important;
   background-color: $color-masala !important;  
 }
-
-.cdk-overlay-container {
-  @include respond(tab-land) {
-    display: none;
-  }
-}
-
