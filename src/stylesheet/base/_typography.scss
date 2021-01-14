@@ -30,7 +30,8 @@
   font-weight: 200;
 
   @include respond(tab-port) {
-    text-align: center;
+    font-size: 2rem;    
+    text-align: justify;
   }
 }
 

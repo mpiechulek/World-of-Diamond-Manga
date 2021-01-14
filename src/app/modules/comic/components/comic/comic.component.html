@@ -1,6 +1,6 @@
 <div class="comic-section">
     <ul class="comic-chapter-list">
-        <li class="list-chapter" *ngFor="let chapter of comicArr" (click)="onChooseChapter(chapter.name)">
+        <li class="chapter-list" *ngFor="let chapter of comicArr" (click)="onChooseChapter(chapter.name)">
             <a class="chapter-list-text">{{chapter.display}}</a>
             <div class="shaper-arrow"></div>
         </li>
