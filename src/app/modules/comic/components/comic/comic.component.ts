@@ -8,7 +8,6 @@ import { ChapterModel } from 'src/app/data/models/chapter.model';
 export class ComicComponent implements OnInit {
 
   @Input() comicArr;
-  @Input() mobileSliderVisibility;
 
   @Output() choosenChapter = new EventEmitter<ChapterModel>();
 
@@ -21,6 +20,7 @@ export class ComicComponent implements OnInit {
   onChooseChapter(chapterName: ChapterModel) {
     this.choosenChapter.emit(chapterName);
   }
+  
 
 
 }
