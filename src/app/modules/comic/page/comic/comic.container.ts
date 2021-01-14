@@ -14,7 +14,7 @@ export class ComicContainerComponent implements OnInit {
   comicArr: ChapterModel[] = [];
   windowWidth: number;
   chapterPageUrlList: string[];
-  mobileSliderVisibiolity = false;
+  mobileSliderVisibility = false;
 
   constructor(
     private chapterPagesService: ChapterPagesService,
@@ -27,22 +27,22 @@ export class ComicContainerComponent implements OnInit {
   }
 
   @HostListener('window:resize', ['$event'])
-  onResize(event) {    
+  onResize(event) {
     this.windowWidth = event.target.innerWidth;
+    if (this.windowWidth <= 800) {
+      this.mobileSliderVisibility = true;
+    } else {
+      this.mobileSliderVisibility = false;
+    }
   }
 
   // if the window width is 800 or less then the mobile ballery will be active
   // else the dialog gallery
-  openChapter(choosenChapter: ChapterModel) {   
+  openChapter(choosenChapter: ChapterModel) {
 
-    if (this.windowWidth <= 800) {    
-      
-      this.mobileSliderVisibiolity = true;
+    if (this.mobileSliderVisibility) {
       this.chapterPageUrlList = this.chapterPagesService.generateChapetPagesUrlList(choosenChapter);
-
-    } else if (this.windowWidth > 800) {
-
-      this.mobileSliderVisibiolity = false;
+    } else {
       let dialogRef = this.matDialog.open(ComicSliderDialogComponent, {
         data: {
           chapter: choosenChapter,
@@ -51,5 +51,5 @@ export class ComicContainerComponent implements OnInit {
       });
     }
   }
-  
+
 }

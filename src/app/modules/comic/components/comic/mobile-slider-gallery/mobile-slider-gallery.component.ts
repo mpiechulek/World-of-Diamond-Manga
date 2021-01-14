@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MobileSliderGalleryComponent implements OnInit {
 
-  @Input() mobileSliderVisibiolity;
+  @Input() mobileSliderVisibility;
 
   constructor() { }
 

@@ -22,6 +22,7 @@ export class ChapterPagesService {
     let pageUrl: string;
     let page = 1;
     let chapterPageUrlList = [];
+    let chossenChapterna
 
     for (page; chosenChapter.length >= page; page++) {
 
