@@ -22,10 +22,10 @@ html {
     font-size: 43.75%;
   }
 
-  @include respond(phone-small) {
-    // width < 600px ? 1rem = 6px, 6/16 = 43.75%
-    font-size: 37.5%;
-  }
+  // @include respond(phone-small) {
+  //   // width < 600px ? 1rem = 6px, 6/16 = 43.75%
+  //   font-size: 37.5%;
+  // }
 }
 
 *,
@@ -43,7 +43,7 @@ body {
   font-size: 1.6rem;
   color: $color-white;
  
-  background-color: $color-masala;
+  background-color: $color-mine-shaft;
   box-sizing: border-box;
   scrollbar-width: none;
   overflow: hidden;

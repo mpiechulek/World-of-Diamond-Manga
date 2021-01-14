@@ -6,9 +6,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  isLoading: boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewInit() {
+    setInterval(() => {
+      this.isLoading = false;
+    }, 10)
   }
 
 }

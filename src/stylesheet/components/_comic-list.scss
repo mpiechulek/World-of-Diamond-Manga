@@ -1,8 +1,11 @@
 .comic-section {
   position: relative;
   width: 100%;
+  display: flex;  
+  flex-grow: 2;
 
   .comic-chapter-list {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,20 +14,21 @@
 
     .chapter-list {
       position: relative;
-      background-color: $color-masala;
+      background-color: $color-mine-shaft;
       list-style: none;
       height: 5rem;
-      width: 60%;
+      width: 50rem;
+      
       margin-top: 0.5rem;
 
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;     
 
-      @include respond(tab-land) {
-        width: 90%;
+      @include respond(tab-port) {
+        width: auto;
       }
 
       .shaper-arrow {
@@ -48,7 +52,7 @@
       }
 
       &:active {
-        color: $color-masala;
+        color: $color-mine-shaft;
       }
     }
   }

@@ -5,6 +5,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeContainerComponent } from './page/home/home.container';
 import { HomeComponent } from './components/home/home.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    SharedModule
+    SharedModule,
+    MatProgressSpinnerModule
   ]
 })
 export class HomeModule { }

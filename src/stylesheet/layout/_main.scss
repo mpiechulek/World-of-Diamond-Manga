@@ -1,27 +1,26 @@
 .main {
+  position: relative;
   width: 100vw;
   height: 100vh;
-  padding: 1.2rem 0;
+  padding: 1rem 0;
+  background-color: $color-mine-shaft;
 
   @include respond(tab-port) {
     padding: 0;
   }
-  
+
   .main-container {
     position: relative;
-    width: 90rem;
+    margin: 0 auto;
+    width: 100rem;
     height: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    
+    border: 1px solid white;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: stretch;
     border: solid 2px $color-border-dive-gray;
     border-radius: 15px;
-    padding: 1rem;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
 
     @include respond(tab-land) {
       width: 80%;
@@ -29,28 +28,28 @@
     }
 
     @include respond(tab-port) {
-      width: 90%;      
+      width: 90%;
     }
 
     @include respond(phone) {
-      width: 100%;     
+      width: 100%;
     }
 
     .main-wrapper {
-      position: relative;
-      overflow: auto;
-      width: 100%;      
-      padding: 1.5rem;
+      padding: 2rem 1rem;    
+      flex-grow: 2;
       display: flex;
       flex-direction: column;
-      flex-grow: 1;
-      // This works on firefox
+      justify-content: flex-start;
+      align-items: center;
+      overflow: hidden;     
       scrollbar-width: none;
-
       background-color: $color-cannon-pink;
       border: none;
       border-top-left-radius: 0.5rem;
       border-top-right-radius: 0.5rem;
+
+      overflow: scroll;
     }
   }
 }

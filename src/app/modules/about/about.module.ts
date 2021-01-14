@@ -4,6 +4,7 @@ import { AboutRoutingModule } from './about-routing.module';
 import { AboutContainerComponent } from './page/about/about.container';
 import { AboutComponent } from './components/about/about.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
   imports: [
     CommonModule,
     AboutRoutingModule,
-    SharedModule
+    SharedModule,
+    MatProgressSpinnerModule
   ]
 })
 export class AboutModule { }

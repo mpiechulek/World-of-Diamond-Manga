@@ -26,11 +26,13 @@ export class ComicSliderDialogComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.galleryUrl = this.chapterPagesService.comicUrl;
     this.maxChapterPages = this.data.chapter.length;
-    this.generatePageData(this.currentPageNumber);
-    this.isLoading = false;
+    this.generatePageData(this.currentPageNumber);    
   }
 
   ngAfterViewInit() {
+    setInterval(()=>{
+      this.isLoading = false;
+    }, 10)
   }
 
   //  Listing for arrow events
