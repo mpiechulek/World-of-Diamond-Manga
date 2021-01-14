@@ -23,18 +23,20 @@ export class ComicContainerComponent implements OnInit {
 
   ngOnInit(): void {
     this.comicArr = this.chapterPagesService.comicArr;
+    this.windowWidth = window.innerWidth;
   }
 
   @HostListener('window:resize', ['$event'])
-  onResize(event) {
+  onResize(event) {    
     this.windowWidth = event.target.innerWidth;
   }
 
   // if the window width is 800 or less then the mobile ballery will be active
   // else the dialog gallery
-  openChapter(choosenChapter: ChapterModel) {
+  openChapter(choosenChapter: ChapterModel) {   
 
-    if (this.windowWidth <= 800) {
+    if (this.windowWidth <= 800) {    
+      
       this.mobileSliderVisibiolity = true;
       this.chapterPageUrlList = this.chapterPagesService.generateChapetPagesUrlList(choosenChapter);
 

@@ -1,4 +1,8 @@
 .mobile-image-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $color-masala;  
   z-index: 4000;
   width: 100vw;
   height: 100vh;
