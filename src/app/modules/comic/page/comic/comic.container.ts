@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ChapterPagesService } from 'src/app/core/services/chapter-pages.service';
 import { ChapterModel } from 'src/app/data/models/chapter.model';
@@ -12,6 +12,7 @@ import { ComicSliderDialogComponent } from 'src/app/shared/components/comic-slid
 export class ComicContainerComponent implements OnInit {
 
   comicArr: ChapterModel[] = [];
+  windowWidth: number;
 
   constructor(
     private chapterPagesService: ChapterPagesService,
@@ -22,11 +23,17 @@ export class ComicContainerComponent implements OnInit {
     this.comicArr = this.chapterPagesService.comicArr;
   }
 
-  openChapter(choosenChapter: ChapterModel) {  
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+
+    this.windowWidth = event.target.innerWidth;
+  }
+
+  openChapter(choosenChapter: ChapterModel) {
 
     let dialogRef = this.matDialog.open(ComicSliderDialogComponent, {
       data: {
-        chapter: choosenChapter,        
+        chapter: choosenChapter,
         panelClass: 'full-width-dialog'
       }
     });
