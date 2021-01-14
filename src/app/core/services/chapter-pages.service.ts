@@ -34,10 +34,10 @@ export class ChapterPagesService {
         page +
         '.png';
 
-        chapterPageUrlList.push(pageUrl);
-    }   
-    
+      chapterPageUrlList.push(pageUrl);
+    }
+
     return chapterPageUrlList;
   }
-  
+
 }

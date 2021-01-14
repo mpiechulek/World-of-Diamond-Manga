@@ -13,6 +13,7 @@ export class ComicContainerComponent implements OnInit {
 
   comicArr: ChapterModel[] = [];
   windowWidth: number;
+  chapterPageUrlList: string[];
 
   constructor(
     private chapterPagesService: ChapterPagesService,
@@ -30,7 +31,8 @@ export class ComicContainerComponent implements OnInit {
 
   openChapter(choosenChapter: ChapterModel) {
 
-    this.chapterPagesService.generateChapetPagesUrlList(choosenChapter);
+    
+    this.chapterPageUrlList = this.chapterPagesService.generateChapetPagesUrlList(choosenChapter);
 
     let dialogRef = this.matDialog.open(ComicSliderDialogComponent, {
       data: {
