@@ -80,7 +80,7 @@ export class ComicSliderDialogComponent implements OnInit, AfterViewInit {
       this.data.chapter.filename +
       '-' +
       pageNumber +
-      '.jpg';
+      '.png';
   }
 
 }
