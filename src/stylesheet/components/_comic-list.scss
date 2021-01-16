@@ -28,7 +28,7 @@
       transition: all 0.3s ease-in-out;     
 
       @include respond(tab-port) {
-        width: auto;
+        max-width: 45rem;
       }
 
       .shaper-arrow {
