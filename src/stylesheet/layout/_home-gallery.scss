@@ -17,7 +17,7 @@
 
   @include respond(tab-port) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 12rem 20rem 30rem 20rem 25rem 35rem;
     grid-template-areas:
       "home-gallery-1"
       "home-gallery-2"
@@ -26,7 +26,8 @@
       "home-gallery-5"
       "home-gallery-6";
       
-      max-height: auto;      
+      max-height: auto;   
+      margin-bottom: 76rem;   
   }
 
   .gallery-cell {
@@ -51,12 +52,8 @@
       }
 
       @include respond(tab-land) {
-        height: 15rem;       
-        &:hover { 
-          height: 50rem;       
-          
-        }
-      }
+        pointer-events: none;
+      } 
 
     }
   }

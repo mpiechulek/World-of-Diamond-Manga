@@ -27,7 +27,8 @@
 .home-section-text {
   font-size: 1.6rem;
   letter-spacing: 1px;
-  text-align: left;
+  line-height: 21px;
+  text-align: justify;
   font-weight: 200;
 
   @include respond(tab-port) {

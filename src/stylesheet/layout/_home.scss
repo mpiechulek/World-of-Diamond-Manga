@@ -20,10 +20,16 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
+
+      @include respond(tab-land) {
+        margin-left: 6rem;       
+      }
   
       @include respond(tab-port) {
         justify-content: center;
         align-items: center;
+        margin-left: 0;
+        width: 90%;
       }
   
       .home-text-wrapper {
