@@ -1,10 +1,5 @@
 .dialog-close-btn, .image-nav-btn {
     border:none; 
     cursor: pointer;      
-    background-color: transparent;   
-    
-    @include respond(tab-port) {
-        width: 1.8rem;
-        height: 1.8rem;
-      }
+    background-color: transparent;  
 }

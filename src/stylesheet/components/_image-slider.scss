@@ -10,12 +10,14 @@
 
   @include respond(tab-land) {
     width: auto;
+    margin: 0;
   }
 
   &__close-btn-wrapper {
-    position: absolute;
-    right: 0;    
-    margin: 1rem 1rem 0 0;
+    position: fixed;
+    right: 5%;
+    top:   3%;
+    
   }
 
   &__image {
