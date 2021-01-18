@@ -1,4 +1,4 @@
-<div class="image-slider" *ngIf="!isLoading">
+<div class="image-slider" *ngIf="!isLoading && !isMobile">
 
     <div class="image-slider__close-btn-wrapper">
         <button class="dialog-close-btn" mat-dialog-close>
@@ -21,9 +21,23 @@
         <button class='image-nav-btn image-nav-btn-left' (click)="onPageForward()">
             <img src="./assets/images/icons/Icon-arrow-right.svg" alt="left">
         </button>
-        
+
     </div>
-    
+
+</div>
+
+<div class="image-slider" *ngIf="!isLoading || isMobile">
+
+    <div class="image-slider__close-btn-wrapper">
+        <button class="dialog-close-btn" mat-dialog-close>
+            <img src="./assets/images/icons/Icon-close.svg" alt="close">
+        </button>
+    </div>
+
+    <cdk-virtual-scroll-viewport itemSize="200" class="mobile-image-slider">
+        <img class="mobile-image-slider__image" [src]="page" alt="" *cdkVirtualFor="let page of chapterPages">
+    </cdk-virtual-scroll-viewport>
+
 </div>
 
 <mat-spinner *ngIf="isLoading"></mat-spinner>

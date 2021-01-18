@@ -12,7 +12,6 @@ import { ComicSliderDialogComponent } from 'src/app/shared/components/comic-slid
 export class ComicContainerComponent implements OnInit {
 
   comicArr: ChapterModel[] = [];
-  windowWidth: number;
   chapterPageUrlList: string[];
 
   constructor(
@@ -21,22 +20,24 @@ export class ComicContainerComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.comicArr = this.chapterPagesService.comicArr;   
+    this.comicArr = this.chapterPagesService.comicArr;
   }
 
   // if the window width is 800 or less then the mobile ballery will be active
   // else the dialog gallery
   openChapter(choosenChapter: ChapterModel) {
-    
-      let dialogRef = this.matDialog.open(ComicSliderDialogComponent, {
-        data: {
-          chapter: choosenChapter
-        },
-        // This overwrites the default mat dialog styles
-        width: '100vw',
-        maxWidth: '100vw',
-      }
-      );   
+
+    this.chapterPagesService.chosenChapterData = choosenChapter;
+
+    let dialogRef = this.matDialog.open(ComicSliderDialogComponent, {
+      data: {
+        chapter: choosenChapter
+      },
+      // This overwrites the default mat dialog styles
+      width: '100vw',
+      maxWidth: '100vw',
+    }
+    );
   }
 
 }

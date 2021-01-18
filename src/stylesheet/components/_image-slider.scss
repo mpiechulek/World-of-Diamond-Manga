@@ -53,3 +53,17 @@ mat-dialog-container {
   padding: 0 !important;
   background-color: $color-mine-shaft !important;  
 }
+
+// Mobile image slider
+
+.mobile-image-slider  {
+  background-color: $color-mine-shaft;
+  width: 100vw;
+  height: 100vh;
+ 
+  &__image {
+    width: 100%;  
+    height: auto;
+    margin-bottom: 2rem;
+  }
+}

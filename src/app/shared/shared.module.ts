@@ -10,6 +10,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MAT_EXPANSION_PANEL_DEFAULT_OPTIONS, MatExpansionModule } from '@angular/material/expansion';
 import { HamburgerMenuComponent } from './components/hamburger-menu/hamburger-menu.component';
 import { HamburgerComponent } from './components/hamburger/hamburger.component';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HamburgerComponent } from './components/hamburger/hamburger.component';
     RouterModule,
     MatExpansionModule,
     MatDialogModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    ScrollingModule
   ],
   entryComponents: [ComicSliderDialogComponent],
   exports: [

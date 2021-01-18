@@ -15,16 +15,17 @@ export class ChapterPagesService {
     { name: 'chapter-4', display: 'Chapter 4', length: 23, filename: "ch-004" },
     { name: 'chapter-5', display: 'Chapter 5', length: 31, filename: "ch-005" },
     { name: 'chapter-4', display: 'Chapter 4', length: 23, filename: "ch-004" },
-    { name: 'chapter-5', display: 'Chapter 5', length: 31, filename: "ch-005" }    
+    { name: 'chapter-5', display: 'Chapter 5', length: 31, filename: "ch-005" }
   ];
 
-  comicUrl = 'assets/images/comic'
+  comicUrl: string = 'assets/images/comic';
+
+  chosenChapterData: ChapterModel;
 
   generateChapetPagesUrlList(chosenChapter: ChapterModel): string[] {
     let pageUrl: string;
     let page = 1;
-    let chapterPageUrlList = [];
-    let chossenChapterna
+    let chapterPageUrlList = [];  
 
     for (page; chosenChapter.length >= page; page++) {
 
@@ -42,5 +43,26 @@ export class ChapterPagesService {
 
     return chapterPageUrlList;
   }
+
+  // Creating the curent page url link and the page name to display
+  generateSinglePageUrl(pageNumber: number) {
+    return './assets/images/comic/' +
+      this.chosenChapterData.name +
+      '/' +
+      this.chosenChapterData.filename +
+      '-' +
+      pageNumber +
+      '.png';
+  }
+
+  // and the page name to display
+  generatePageDataToDisplay(pageNumber: number) {
+    return this.chosenChapterData.name +
+      '-' +
+      pageNumber +
+      '/' +
+      this.chosenChapterData.length;
+  }
+
 
 }
