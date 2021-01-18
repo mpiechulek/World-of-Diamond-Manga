@@ -20,7 +20,9 @@ export class ComicSliderDialogComponent implements OnInit, AfterViewInit {
   isMobile: boolean = true;
   
   chapterPages: string[] = [];
+  
   innerWidth: number;
+  innerHeight: number;
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: { chapter: ChapterModel },
@@ -33,9 +35,10 @@ export class ComicSliderDialogComponent implements OnInit, AfterViewInit {
 
     this.currentPageUrl = this.chapterPagesService.generateSinglePageUrl(this.currentPageNumber);
     this.currentPageName = this.chapterPagesService.generatePageDataToDisplay(this.currentPageNumber);
+    this.chapterPages = this.chapterPagesService.generateChapetPagesUrlList(this.data.chapter);
 
     this.innerWidth = window.innerWidth;   
-    this.chapterPages = this.chapterPagesService.generateChapetPagesUrlList(this.data.chapter)
+    this.innerHeight = window.innerHeight;   
   }
 
   ngAfterViewInit() {

@@ -11,6 +11,9 @@
   .comic-chapter-list {
     width: 60rem;
     height: calc(100vh - 23.1rem);
+    overflow: scroll;
+    scrollbar-width: none;
+
     display: flex;
     flex-direction: column;   
 

@@ -2,7 +2,7 @@
 
     <ul>
 
-        <cdk-virtual-scroll-viewport itemSize="70" class="comic-chapter-list">
+        <cdk-virtual-scroll-viewport itemSize="50" class="comic-chapter-list">
 
             <li class="chapter-list" *cdkVirtualFor="let chapter of comicArr" (click)="onChooseChapter(chapter)">
                 <a class="chapter-list-text">{{chapter.display}}</a>

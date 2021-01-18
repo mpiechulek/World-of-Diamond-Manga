@@ -34,7 +34,7 @@
         </button>
     </div>
 
-    <cdk-virtual-scroll-viewport itemSize="200" class="mobile-image-slider">
+    <cdk-virtual-scroll-viewport itemSize="{{innerHeight}}" class="mobile-image-slider">
         <img class="mobile-image-slider__image" [src]="page" alt="" *cdkVirtualFor="let page of chapterPages">
     </cdk-virtual-scroll-viewport>
 

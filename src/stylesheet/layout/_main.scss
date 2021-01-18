@@ -61,14 +61,15 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      overflow: hidden;
+      
+      overflow: scroll;
       scrollbar-width: none;
+      
       background-color: $color-cannon-pink;
       border: none;
       border-top-left-radius: 0.5rem;
       border-top-right-radius: 0.5rem;
 
-      overflow: scroll;
     }
   }
 }
