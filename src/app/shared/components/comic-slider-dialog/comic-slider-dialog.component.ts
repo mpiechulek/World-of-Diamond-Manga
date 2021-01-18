@@ -12,15 +12,15 @@ import { ChapterModel } from 'src/app/data/models/chapter.model';
 export class ComicSliderDialogComponent implements OnInit, AfterViewInit {
 
   currentPageUrl: string;
-  currentPageName: string;  
-  currentPageNumber: number = 1;  
+  currentPageName: string;
+  currentPageNumber: number = 1;
   maxChapterPages: number;
 
   isLoading: boolean = true;
-  isMobile: boolean = true;
-  
+  isMobile: boolean = false;
+
   chapterPages: string[] = [];
-  
+
   innerWidth: number;
   innerHeight: number;
 
@@ -30,15 +30,17 @@ export class ComicSliderDialogComponent implements OnInit, AfterViewInit {
   ) { }
 
   ngOnInit(): void {
-  
+
     this.maxChapterPages = this.data.chapter.length;
 
     this.currentPageUrl = this.chapterPagesService.generateSinglePageUrl(this.currentPageNumber);
     this.currentPageName = this.chapterPagesService.generatePageDataToDisplay(this.currentPageNumber);
     this.chapterPages = this.chapterPagesService.generateChapetPagesUrlList(this.data.chapter);
 
-    this.innerWidth = window.innerWidth;   
-    this.innerHeight = window.innerHeight;   
+    this.innerWidth = window.innerWidth;
+    this.innerHeight = window.innerHeight;
+
+    this.getDataForCurrentDevice();
   }
 
   ngAfterViewInit() {
@@ -57,9 +59,25 @@ export class ComicSliderDialogComponent implements OnInit, AfterViewInit {
     }
   }
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.innerWidth = window.innerWidth;
+    this.getDataForCurrentDevice();
+  }
+
+  getDataForCurrentDevice() {
+    if (this.innerWidth > 1200) {
+      this.currentPageUrl = this.chapterPagesService.generateSinglePageUrl(this.currentPageNumber);
+      this.currentPageName = this.chapterPagesService.generatePageDataToDisplay(this.currentPageNumber);
+      this.isMobile = false;
+    } else if (this.innerWidth < 1200) {
+      this.chapterPages = this.chapterPagesService.generateChapetPagesUrlList(this.data.chapter);
+      this.isMobile = true;
+    }
+  }
+
   // Display the previous page 
   onPageBack() {
-
     this.currentPageNumber--;
     if (this.currentPageNumber <= 0) {
       this.currentPageNumber = this.maxChapterPages;
@@ -67,7 +85,6 @@ export class ComicSliderDialogComponent implements OnInit, AfterViewInit {
     this.currentPageUrl = this.chapterPagesService.generateSinglePageUrl(this.currentPageNumber);
     this.currentPageName = this.chapterPagesService.generatePageDataToDisplay(this.currentPageNumber);
   }
-
 
   // Display the next page
   onPageForward() {
