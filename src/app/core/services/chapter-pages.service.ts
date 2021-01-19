@@ -34,7 +34,7 @@ export class ChapterPagesService {
         chosenChapter.filename +
         '-' +
         page +
-        '.png';
+        '.jpg';
 
       chapterPageUrlList.push(pageUrl);
     }
@@ -50,7 +50,7 @@ export class ChapterPagesService {
       this.chosenChapterData.filename +
       '-' +
       pageNumber +
-      '.png';
+      '.jpg';
   }
 
   // and the page name to display
