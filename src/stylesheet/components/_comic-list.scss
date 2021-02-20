@@ -6,10 +6,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: 100%; 
+  min-height: 80%; 
 
   .comic-chapter-list {
-    width: 60rem;
+    width: 45rem;
     height: calc(100vh - 23.1rem);
     overflow: scroll;
     scrollbar-width: none;
@@ -18,12 +18,12 @@
     flex-direction: column;   
 
     @include respond(tab-port) {
-      width: 45rem;
+      width: 35rem;
       height: calc(100vh - 17.3rem);
     }
 
     @include respond(phone) {
-      width: 35rem;       
+      width: 90vw;       
       height: calc(100vh - 15rem);
     }
 
@@ -68,4 +68,21 @@
 
 .section::-webkit-scrollbar {
   display: none;
+}
+
+
+.comic-section-image-one{
+  position: absolute;
+  width: 25rem;
+  bottom: 6rem;
+  left: 2.5rem; 
+
+  @include respond(tab-land) {
+    width: 14rem;    
+  }
+
+  @include respond(phone) {
+    display: none;
+  }
+
 }
