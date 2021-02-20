@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import { ChapterModel } from 'src/app/data/models/chapter.model';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { ComicSliderDialogComponent } from 'src/app/shared/components/comic-slider-dialog/comic-slider-dialog.component';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +18,7 @@ export class ChapterPagesService {
 
   chosenChapterData: ChapterModel;
 
-  generateChapetPagesUrlList(chosenChapter: ChapterModel): string[] {
+  generateChapterPagesUrlList(chosenChapter: ChapterModel): string[] {
     let pageUrl: string;
     let page = 1;
     let chapterPageUrlList = [];  
@@ -42,7 +40,7 @@ export class ChapterPagesService {
     return chapterPageUrlList;
   }
 
-  // Creating the curent page url link and the page name to display
+  // Creating the current page url link and the page name to display
   generateSinglePageUrl(pageNumber: number) {
     return './assets/images/comic/' +
       this.chosenChapterData.name +

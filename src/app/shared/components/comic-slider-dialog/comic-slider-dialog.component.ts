@@ -35,7 +35,7 @@ export class ComicSliderDialogComponent implements OnInit, AfterViewInit {
 
     this.currentPageUrl = this.chapterPagesService.generateSinglePageUrl(this.currentPageNumber);
     this.currentPageName = this.chapterPagesService.generatePageDataToDisplay(this.currentPageNumber);
-    this.chapterPages = this.chapterPagesService.generateChapetPagesUrlList(this.data.chapter);
+    this.chapterPages = this.chapterPagesService.generateChapterPagesUrlList(this.data.chapter);
 
     this.innerWidth = window.innerWidth;
     this.innerHeight = window.innerHeight;
@@ -71,7 +71,7 @@ export class ComicSliderDialogComponent implements OnInit, AfterViewInit {
       this.currentPageName = this.chapterPagesService.generatePageDataToDisplay(this.currentPageNumber);
       this.isMobile = false;
     } else if (this.innerWidth < 1200) {
-      this.chapterPages = this.chapterPagesService.generateChapetPagesUrlList(this.data.chapter);
+      this.chapterPages = this.chapterPagesService.generateChapterPagesUrlList(this.data.chapter);
       this.isMobile = true;
     }
   }

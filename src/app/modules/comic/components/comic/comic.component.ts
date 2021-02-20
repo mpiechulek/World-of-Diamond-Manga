@@ -15,7 +15,7 @@ export class ComicComponent implements OnInit {
 
   @Input() comicArr: ChapterModel[];
 
-  @Output() choosenChapter = new EventEmitter<ChapterModel>();  
+  @Output() chosenChapter = new EventEmitter<ChapterModel>();  
 
   constructor() { }
 
@@ -24,6 +24,6 @@ export class ComicComponent implements OnInit {
   }
 
   onChooseChapter(chapterName: ChapterModel) {
-    this.choosenChapter.emit(chapterName);
+    this.chosenChapter.emit(chapterName);
   }
 }

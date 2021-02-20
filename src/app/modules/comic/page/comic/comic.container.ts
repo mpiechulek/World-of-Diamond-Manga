@@ -23,15 +23,15 @@ export class ComicContainerComponent implements OnInit {
     this.comicArr = this.chapterPagesService.comicArr;
   }
 
-  // if the window width is 800 or less then the mobile ballery will be active
+  // if the window width is 800 or less then the mobile gallery will be active
   // else the dialog gallery
-  openChapter(choosenChapter: ChapterModel) {
+  openChapter(chosenChapter: ChapterModel) {
 
-    this.chapterPagesService.chosenChapterData = choosenChapter;
+    this.chapterPagesService.chosenChapterData = chosenChapter;
 
     let dialogRef = this.matDialog.open(ComicSliderDialogComponent, {
       data: {
-        chapter: choosenChapter
+        chapter: chosenChapter
       },
       // This overwrites the default mat dialog styles
       width: '100vw',
