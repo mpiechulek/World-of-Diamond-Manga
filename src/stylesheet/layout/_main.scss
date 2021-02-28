@@ -5,6 +5,17 @@
   padding: 1rem 0;
   background-color: $color-mine-shaft;
 
+  .main-qr-image {
+    position: absolute;
+    width: 10rem;
+    right: 20px;
+    bottom: 20px;
+
+    @include respond(tab-land) {     
+        display: none;     
+    }
+  }
+
   video {
     position: absolute;
     top: 0;
@@ -24,7 +35,7 @@
   }
 
   @include respond(tab-port) {
-    padding: 0;  
+    padding: 0;
   }
 
   .main-container {
@@ -61,10 +72,10 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      
+
       overflow: scroll;
       scrollbar-width: none;
-      
+
       background-color: $color-cannon-pink;
       border: none;
       border-top-left-radius: 0.5rem;
