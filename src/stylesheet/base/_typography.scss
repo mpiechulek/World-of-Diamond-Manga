@@ -1,17 +1,22 @@
 .header-main {
-  font-size: 4.8rem;
+  font-size: 4.4rem;
   font-weight: 400;
   line-height: 1.13;
   letter-spacing: 6px;
 
   @include respond(tab-port) {
-    font-size: 4.4rem;
+    font-size: 4.2rem;
   }
 
   @include respond(tab-port) {
-    font-size: 4rem;
+    font-size: 3.8rem;
     letter-spacing: 4px;
   }
+}
+
+.header-main-paragraph {
+  font-size: 1.6rem;
+  letter-spacing: 6px;
 }
 
 .navbar-tag-text {
@@ -20,11 +25,14 @@
   letter-spacing: 2px;
   text-decoration: none;
   color: $color-white;
+
   @include respond(tab-land) {
     font-size: 3rem;
   }
 
-  &:active, :link, :visited {
+  &:active,
+  :link,
+  :visited {
     color: $color-white;
   }
 }
@@ -37,7 +45,7 @@
   font-weight: 200;
 
   @include respond(tab-port) {
-    font-size: 2rem;    
+    font-size: 2rem;
     text-align: justify;
   }
 }
@@ -47,7 +55,7 @@
   letter-spacing: 3px;
 
   @include respond(tab-port) {
-    font-size: 2rem;    
+    font-size: 2rem;
   }
 }
 

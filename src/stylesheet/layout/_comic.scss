@@ -1,0 +1,154 @@
+.comic-section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 80%;
+
+  .comic-chapter-list {
+    width: 45rem;
+    height: calc(100vh - 23.1rem);
+    overflow: scroll;
+    scrollbar-width: none;
+
+    display: flex;
+    flex-direction: column;
+
+    @include respond(tab-port) {
+      width: 35rem;
+      height: calc(100vh - 17.3rem);
+    }
+
+    @include respond(phone) {
+      width: 90vw;
+      height: calc(100vh - 15rem);
+    }
+
+    .chapter-list {
+      position: relative;
+      background-color: $color-mine-shaft;
+      list-style: none;
+      height: 5rem;
+      margin-top: 0.5rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease-in-out;
+
+      .shaper-arrow {
+        display: none;
+        position: absolute;
+        transition: all 0.3s;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 2.5rem solid transparent;
+        border-right: 4rem solid $color-cannon-pink;
+        border-bottom: 2.5rem solid transparent;
+      }
+
+      &:hover {
+        .shaper-arrow {
+          display: block;
+        }
+
+        color: $color-gold-sand;
+      }
+
+      &:active {
+        color: $color-mine-shaft;
+      }
+    }
+  }
+}
+
+.section::-webkit-scrollbar {
+  display: none;
+}
+
+.comic-section-image-one {
+  position: absolute;
+  width: 25rem;
+  bottom: 6rem;
+  left: 2.5rem;
+
+  @include respond(tab-land) {
+    width: 13rem;
+  }
+
+  @include respond(phone) {
+    display: none;
+  }
+
+}
+
+.comic-section-image-container {
+  position: absolute;
+  top: 20rem;
+  right: 2rem;
+  height: 100%; 
+
+  @include respond(phone) {
+    display: none;
+  }
+
+  .swirl-wrapper {
+    position: relative;
+    top: 5rem;
+    right: 2rem;
+    display: flex;
+    width: 16rem;
+    height: 10rem;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include respond(tab-land) {
+      right: 2.5rem;
+      width: 7rem; 
+      top: 0; 
+      height: 8.5rem;    
+    }
+
+  }
+
+  .comic-section-image-swirl {
+    width: 7rem;
+    border-radius: 50%;
+    animation: rotation 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    @include respond(tab-land) {
+        width: 4rem;
+      }
+  }
+
+  .comic-section-image-two {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20rem;
+
+    @include respond(tab-land) {
+      width: 11rem;
+    }
+  }
+
+  .right-swirl-margin {
+    margin-bottom: 1rem;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(359deg);
+    }
+  }
+}
