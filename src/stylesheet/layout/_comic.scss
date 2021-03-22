@@ -88,17 +88,12 @@
 .comic-section-image-three  {
   position: absolute;
   width: 15rem;
-  top: 35rem;
+  bottom: 30rem;
   left: 4rem;
 
   @include respond(tab-land) {
-    top: 52rem;
+    bottom: 17rem;
     width: 10rem;
-  }
-
-  @include respond(tab-port) {
-    top: 62rem;
-   
   }
 
   @include respond(phone) {
