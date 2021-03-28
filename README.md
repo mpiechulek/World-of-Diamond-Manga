@@ -2,7 +2,7 @@
 
 A Web page made with Angular, containing  my  manga-comic. 
 
-https://mpiechulek.github.io/World-of-Diamond-Manga/
+https://the-world-of-diamond-comic.herokuapp.com/home
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.0-rc.0.
 
