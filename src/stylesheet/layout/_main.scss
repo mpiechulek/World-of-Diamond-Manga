@@ -3,7 +3,7 @@
   width: 100vw;
   height: 100vh;
   padding: 1rem 0;
-  background-color: $color-mine-shaft;
+  background-color: $color-mine-shaft; 
 
   .main-qr-image {
     position: absolute;
@@ -11,8 +11,9 @@
     right: 20px;
     bottom: 20px;
 
-    @include respond(tab-land) {     
-        display: none;     
+    @include respond(tab-land) {
+      display: none;
+
     }
   }
 
@@ -55,6 +56,7 @@
     @include respond(tab-land) {
       width: 80%;
       border: none;
+      padding: 0;
     }
 
     @include respond(tab-port) {
