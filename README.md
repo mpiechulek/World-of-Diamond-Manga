@@ -1,6 +1,6 @@
 # MyComic
 
-A Web page made with Angular, containing  my  manga-comic. 
+The World of Diamond is a manga-style comic, created and designed by Michał Piechulek. It was an independent art project aiming to improve his artistic skills. Created in 2009-2010, it grew to 132 pages of hand drawn comic. The story takes place in between two competing universes. The plot is a little chaotic and crazy, but I hope you will enjoy it. 
 
 https://the-world-of-diamond-comic.herokuapp.com/home
 
