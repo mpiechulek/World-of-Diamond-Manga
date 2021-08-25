@@ -16,8 +16,7 @@ export class HamburgerComponent implements OnInit {
 
   ngOnInit(): void {
     this.isOpenSubscription = this.hamburgerMenuService.getOpenState().subscribe((isOpen) => {
-      this.isOpen = isOpen;
-      console.log(isOpen);      
+      this.isOpen = isOpen;       
     });
   }
 

@@ -6,6 +6,7 @@ import { ComicComponent } from './components/comic/comic.component';
 import { ComicContainerComponent } from './page/comic/comic.container';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     CommonModule,
     ComicRoutingModule,
     SharedModule,
-    MatDialogModule    
+    MatDialogModule,
+    ScrollingModule
   ]
 })
 

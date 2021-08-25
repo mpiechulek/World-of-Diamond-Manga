@@ -10,19 +10,21 @@
 
   @include respond(tab-land) {
     width: auto;
+    margin: 0;
   }
 
   &__close-btn-wrapper {
-    position: absolute;
-    right: 0;    
-    margin: 1rem 1rem 0 0;
+    position: fixed;
+    z-index: 3000;
+    right: 5%;
+    top: 3%;
   }
 
   &__image {
     width: auto;
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
 
     img {
       display: block;
@@ -49,5 +51,27 @@
 // Overwriting mat dialog styles
 mat-dialog-container {
   padding: 0 !important;
-  background-color: $color-mine-shaft !important;  
+  background-color: $color-mine-shaft !important;
+}
+
+// Mobile image slider
+
+.mobile-image-slider {
+  background-color: $color-mine-shaft;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  &__image {
+    display: block;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 100%;
+
+    @include respond(tab-port) {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }

@@ -14,16 +14,21 @@
     align-items: flex-start;
   }
 
-
   &__wrapper {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+
+    .main-header-wrapper-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
 
     .header-main {
       margin: 0 1rem;
     }
-
   }
 }

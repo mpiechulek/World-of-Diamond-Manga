@@ -24,7 +24,7 @@
   .logo-diamond-1,
   .logo-diamond-2 {
     position: absolute;
-    width: 13rem;
+    width: 13.2rem;
 
     @include respond(tab-port) {
       width: 8rem;     
@@ -32,8 +32,8 @@
   }
 
   .logo-diamond-1 {
-    top: 27.5%;
-    left: 26.5%;
+    top: 27%;
+    left: 24.5%;
     z-index: 3;
 
     @include respond(tab-port) {

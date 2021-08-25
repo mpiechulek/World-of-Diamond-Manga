@@ -1,4 +1,4 @@
-<div class="image-slider" *ngIf="!isLoading">
+<div class="image-slider" (window:resize)="onResize($event)">
 
     <div class="image-slider__close-btn-wrapper">
         <button class="dialog-close-btn" mat-dialog-close>
@@ -6,11 +6,11 @@
         </button>
     </div>
 
-    <div class="image-slider__image">
+    <div class="image-slider__image" *ngIf="!isLoading && !isMobile">
         <img [src]="currentPageUrl" alt="comic-page">
     </div>
 
-    <div class="image-slider__navigation">
+    <div class="image-slider__navigation" *ngIf="!isLoading && !isMobile">
 
         <button class='image-nav-btn image-nav-btn-left' (click)="onPageBack()">
             <img src="./assets/images/icons/Icon-arrow-left.svg" alt="right">
@@ -21,9 +21,13 @@
         <button class='image-nav-btn image-nav-btn-left' (click)="onPageForward()">
             <img src="./assets/images/icons/Icon-arrow-right.svg" alt="left">
         </button>
-        
+
     </div>
-    
+
+    <cdk-virtual-scroll-viewport itemSize="{{innerHeight}}" class="mobile-image-slider" *ngIf="!isLoading && isMobile">
+        <img class="mobile-image-slider__image" [src]="page" alt="" *cdkVirtualFor="let page of chapterPages">
+    </cdk-virtual-scroll-viewport>
+
 </div>
 
 <mat-spinner *ngIf="isLoading"></mat-spinner>

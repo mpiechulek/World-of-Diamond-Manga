@@ -1,24 +1,25 @@
-.home-gallery { 
+.home-gallery {
   position: relative;
-  overflow: scroll;
   display: grid;
-  max-height: calc(100vh - 42.5rem);
+  max-height: calc(100vh - 43.8rem);
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 1rem;    
+  grid-gap: 1rem;
 
   grid-template-areas:
     "home-gallery-1 home-gallery-2 home-gallery-2 home-gallery-2"
     "home-gallery-3 home-gallery-3 home-gallery-4 home-gallery-5"
     "home-gallery-3 home-gallery-3 home-gallery-4 home-gallery-6";
 
-    @include respond(tab-land) {
-      max-height: calc(100vh - 35rem);
-    }
+  @include respond(tab-land) {
+    max-height: calc(100vh - 35rem);
+  }
 
   @include respond(tab-port) {
+    max-height: auto;
+    margin-bottom: 4rem;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 12rem 20rem 30rem 20rem 25rem 35rem;
     grid-template-areas:
       "home-gallery-1"
       "home-gallery-2"
@@ -26,8 +27,6 @@
       "home-gallery-4"
       "home-gallery-5"
       "home-gallery-6";
-      
-      max-height: auto;      
   }
 
   .gallery-cell {
@@ -41,23 +40,18 @@
       object-fit: cover;
       width: 100%;
       height: 100%;
-      object-position: top;      
-      transform: scale(2);
+      object-position: center;
       /* Animation */
-      transition: all 1.5s;
+      transition: all 1s;
 
-      &:hover {        
+      &:hover {
         /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-        transform: scale(1);
+        transform: scale(1.1);
+        filter: invert(80%);
       }
 
       @include respond(tab-land) {
-        height: 15rem;
-        transform: scale(1);
-        &:hover { 
-          height: 50rem;       
-          
-        }
+        pointer-events: none;
       }
 
     }

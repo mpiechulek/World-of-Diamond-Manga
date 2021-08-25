@@ -1,9 +1,30 @@
+<img class="comic-section-image-one" src="./../assets/images/img/gallery-img-1.png" alt="gal-img-1">
+<img class="comic-section-image-three " src="./../assets/images/img/gallery-img-3.png" alt="gal-img-3">
 
 <div class="comic-section">
-    <ul class="comic-chapter-list">
-        <li class="chapter-list" *ngFor="let chapter of comicArr" (click)="onChooseChapter(chapter)">
-            <a class="chapter-list-text">{{chapter.display}}</a>
-            <div class="shaper-arrow"></div>
-        </li>
+
+    <ul>
+
+        <cdk-virtual-scroll-viewport itemSize="50" class="comic-chapter-list">
+
+            <li class="chapter-list" *cdkVirtualFor="let chapter of comicArr" (click)="onChooseChapter(chapter)">
+                <a class="chapter-list-text">{{chapter.display}}</a>
+                <div class="shaper-arrow"></div>
+            </li>
+
+        </cdk-virtual-scroll-viewport>
+
     </ul>
+
+</div>
+
+<div class="comic-section-image-container">
+
+    <div class="swirl-wrapper">
+        <img class="comic-section-image-swirl" src="./../assets/images/img/swirl.jpg" alt="swirl-1">
+        <img class="comic-section-image-swirl right-swirl-margin " src="./../assets/images/img/swirl.jpg" alt="swirl-1">
+    </div>
+
+    <img class="comic-section-image-two right-swirl-margin" src="./../assets/images/img/gallery-img-2.png" alt="gal-img-2">
+
 </div>

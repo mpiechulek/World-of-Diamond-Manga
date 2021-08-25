@@ -3,13 +3,44 @@
   width: 100vw;
   height: 100vh;
   padding: 1rem 0;
-  background-color: $color-mine-shaft;
+  background-color: $color-mine-shaft; 
+
+  .main-qr-image {
+    position: absolute;
+    width: 8rem;
+    right: 20px;
+    bottom: 20px;
+
+    @include respond(tab-land) {
+      display: none;
+
+    }
+  }
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    filter: contrast(250%);
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  @include respond(tab-land) {
+    video {
+      display: none;
+    }
+  }
 
   @include respond(tab-port) {
     padding: 0;
   }
 
   .main-container {
+    background-color: $color-mine-shaft;
     position: relative;
     margin: 0 auto;
     width: 100rem;
@@ -25,6 +56,7 @@
     @include respond(tab-land) {
       width: 80%;
       border: none;
+      padding: 0;
     }
 
     @include respond(tab-port) {
@@ -36,20 +68,21 @@
     }
 
     .main-wrapper {
-      padding: 2rem 1rem;    
+      padding: 2rem 1rem;
       flex-grow: 2;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      overflow: hidden;     
+
+      overflow: scroll;
       scrollbar-width: none;
+
       background-color: $color-cannon-pink;
       border: none;
       border-top-left-radius: 0.5rem;
       border-top-right-radius: 0.5rem;
 
-      overflow: scroll;
     }
   }
 }

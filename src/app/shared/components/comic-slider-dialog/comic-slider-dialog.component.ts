@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, HostListener, Inject, OnInit } from '@angular/core';
+import { AfterViewInit, Component, HostListener, Inject, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ChapterPagesService } from 'src/app/core/services/chapter-pages.service';
 import { KeyCode } from 'src/app/data/enums/key-code.enum';
@@ -11,26 +11,40 @@ import { ChapterModel } from 'src/app/data/models/chapter.model';
 })
 export class ComicSliderDialogComponent implements OnInit, AfterViewInit {
 
-  galleryUrl: string;
   currentPageUrl: string;
   currentPageName: string;
   currentPageNumber: number = 1;
   maxChapterPages: number;
+
   isLoading: boolean = true;
+  isMobile: boolean = false;
+
+  chapterPages: string[] = [];
+
+  innerWidth: number;
+  innerHeight: number;
 
   constructor(
-        @Inject(MAT_DIALOG_DATA) public data: { chapter: ChapterModel },
-        private chapterPagesService: ChapterPagesService
-    ) { }
+    @Inject(MAT_DIALOG_DATA) public data: { chapter: ChapterModel },
+    private chapterPagesService: ChapterPagesService
+  ) { }
 
   ngOnInit(): void {
-    this.galleryUrl = this.chapterPagesService.comicUrl;
+
     this.maxChapterPages = this.data.chapter.length;
-    this.generatePageData(this.currentPageNumber);    
+
+    this.currentPageUrl = this.chapterPagesService.generateSinglePageUrl(this.currentPageNumber);
+    this.currentPageName = this.chapterPagesService.generatePageDataToDisplay(this.currentPageNumber);
+    this.chapterPages = this.chapterPagesService.generateChapterPagesUrlList(this.data.chapter);
+
+    this.innerWidth = window.innerWidth;
+    this.innerHeight = window.innerHeight;
+
+    this.getDataForCurrentDevice();
   }
 
   ngAfterViewInit() {
-    setInterval(()=>{
+    setInterval(() => {
       this.isLoading = false;
     }, 10)
   }
@@ -45,13 +59,31 @@ export class ComicSliderDialogComponent implements OnInit, AfterViewInit {
     }
   }
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.innerWidth = window.innerWidth;
+    this.getDataForCurrentDevice();
+  }
+
+  getDataForCurrentDevice() {
+    if (this.innerWidth > 1200) {
+      this.currentPageUrl = this.chapterPagesService.generateSinglePageUrl(this.currentPageNumber);
+      this.currentPageName = this.chapterPagesService.generatePageDataToDisplay(this.currentPageNumber);
+      this.isMobile = false;
+    } else if (this.innerWidth < 1200) {
+      this.chapterPages = this.chapterPagesService.generateChapterPagesUrlList(this.data.chapter);
+      this.isMobile = true;
+    }
+  }
+
   // Display the previous page 
   onPageBack() {
     this.currentPageNumber--;
     if (this.currentPageNumber <= 0) {
       this.currentPageNumber = this.maxChapterPages;
     }
-    this.generatePageData(this.currentPageNumber);
+    this.currentPageUrl = this.chapterPagesService.generateSinglePageUrl(this.currentPageNumber);
+    this.currentPageName = this.chapterPagesService.generatePageDataToDisplay(this.currentPageNumber);
   }
 
   // Display the next page
@@ -60,27 +92,8 @@ export class ComicSliderDialogComponent implements OnInit, AfterViewInit {
     if (this.currentPageNumber > this.maxChapterPages) {
       this.currentPageNumber = 1;
     }
-    this.generatePageData(this.currentPageNumber);
-  }
-
-  // Creating the curent page url link and the page name to display
-  generatePageData(pageNumber: number) {
-
-    this.currentPageName =
-      this.data.chapter.name +
-      '-' +
-      this.currentPageNumber +
-      '/' +
-      this.data.chapter.length;
-
-    this.currentPageUrl =
-      './assets/images/comic/' +
-      this.data.chapter.name +
-      '/' +
-      this.data.chapter.filename +
-      '-' +
-      pageNumber +
-      '.jpg';
+    this.currentPageUrl = this.chapterPagesService.generateSinglePageUrl(this.currentPageNumber);
+    this.currentPageName = this.chapterPagesService.generatePageDataToDisplay(this.currentPageNumber);
   }
 
 }

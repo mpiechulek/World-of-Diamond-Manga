@@ -3,7 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;  
-  overflow: auto;
+  overflow-y: auto;
+  scrollbar-width: none;
 
   &__container {
     display: flex;
