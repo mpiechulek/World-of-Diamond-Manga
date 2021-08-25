@@ -32,12 +32,21 @@ const routes: Routes = [
           import('./modules/comic/comic.module').then(
             m => m.ComicModule
           )
+      },
+      {
+        path: '',
+        loadChildren: () =>
+          import('./modules/contact/contact.module').then(
+            m => m.ContactModule
+          )
       }
 
     ]
+  },
+  {
+    path: '**',
+    redirectTo: 'home'
   }
-
-
 ];
 
 @NgModule({
