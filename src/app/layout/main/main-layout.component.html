@@ -3,7 +3,9 @@
 <main class="main">
 
     <video autoplay muted loop>
+
         <source src="./assets/video/smoke.mp4" type="video/mp4">
+        
     </video> 
 
     <div class="main-container">
@@ -17,15 +19,16 @@
 
         <app-navbar-ui style="width: 100%"></app-navbar-ui>
 
-        <article class="main-wrapper">
+        <section class="main-wrapper">
 
             <router-outlet></router-outlet>
 
-        </article>               
+        </section>               
 
         <app-footer-ui style="width:100%"></app-footer-ui>        
 
     </div>
 
     <img class="main-qr-image" src="./assets/images/img/heroku-qr-link.png" alt="QR">
+
 </main>
